@@ -35,7 +35,6 @@
                                         <connections>
                                             <action selector="allButton:color:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iFP-oc-N5b"/>
                                             <action selector="checkButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sG-SL-aFA"/>
-                                            <action selector="keyWordButton1AC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZK-wM-wPH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnT-FX-9yU">
@@ -44,7 +43,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="allButton:color:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yWL-QA-5cJ"/>
-                                            <action selector="keyWordButton2AC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQX-ug-YvC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ca4-L6-l6v">
@@ -53,7 +51,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="allButton:color:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WvF-KV-Amz"/>
-                                            <action selector="keyWordButton3AC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mig-AA-XwM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vha-Ir-lZl">
@@ -62,7 +59,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="allButton:color:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0xI-Yt-cah"/>
-                                            <action selector="keyWordButton4AC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0eG-Ek-oZL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -74,12 +70,6 @@
                                     <constraint firstAttribute="height" constant="160" id="ajh-If-iAg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk8-fK-hEx">
-                                <rect key="frame" x="176" y="439.66666666666669" width="41.333333333333343" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjr-KM-cEq">
                                 <rect key="frame" x="146.66666666666666" y="679" width="100" height="50"/>
                                 <constraints>
@@ -92,6 +82,12 @@
                                     <segue destination="3Wc-My-gH2" kind="show" id="irs-V8-4UE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk8-fK-hEx">
+                                <rect key="frame" x="131" y="437" width="131" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

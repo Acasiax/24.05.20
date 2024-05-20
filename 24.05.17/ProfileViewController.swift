@@ -30,15 +30,15 @@ class ProfileViewController: UIViewController {
 //        return textField
 //    }()
     
-    
-// 🌟 키보드가 안나와요~~~! -[UIKeyboardTaskQueue lockWhenReadyForMainThread] timeout waiting for task on queue 버그 같아요..
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NextButton.setTitle("다음 과제", for: .normal)
        userTextField.placeholder = "신조어를 입력하세요."
+        resultLabel.text = "Test Label"
         keywordButtonSetup()
+    
       //  setupGesture()
     }
     
@@ -66,71 +66,61 @@ class ProfileViewController: UIViewController {
     @IBAction func checkButtonClicked(_ sender: UIButton) {
       //  print(userTextField.text?.count)
         
-        if let text = userTextField.text {
-            if text.count >= 2 && text.count < 8 {
-                if text == "바보" {
-                    resultLabel.text = "다시 확인해주세요"
-                } else {
-                    resultLabel.text = text
-                }
-            } else {
-                resultLabel.text = "다시 확인해주세요"
-            }
-        }
+//        if let text = userTextField.text {
+//            if text.count >= 2 && text.count < 8 {
+//                if text == "바보" {
+//                    resultLabel.text = "다시 확인해주세요"
+//                } else {
+//                    resultLabel.text = text
+//                }
+//            } else {
+//                resultLabel.text = "다시 확인해주세요"
+//            }
+//        }
         
-        resultLabel.text = userTextField.text
+       // resultLabel.text = userTextField.text
         
     }
     
     
   
     @IBAction func allButton(_ sender: UIButton, color: UIColor) {
-        resetButtonBackgrounds()
-       // resultLabel.text =
         
-    }
-    
-    
-    
-    @IBAction func keyWordButton1AC(_ sender: UIButton) {
-        resetButtonBackgrounds()
-        resultLabel.text = "You 미쳤어? 촤촤촤~"
-        resultLabel.textColor = UIColor.red
-        keyWordButton1.backgroundColor = UIColor.yellow
-       
+        print(sender.tag)
         
-    }
-    
-    @IBAction func keyWordButton2AC(_ sender: UIButton) {
+          switch sender.tag {
+          case 0:
+              resultLabel.text = "dfdf"
+              i(button: keyWordButton1, text: "윰차", color: .white, backgroundcolor: .orange, result: "유미유미")
+          case 1:
+              resultLabel.text = "dfdf"
+              i(button: keyWordButton2, text: "실매", color: .white, backgroundcolor: .blue, result: "유미유미")
+          case 2:
+              i(button: keyWordButton3, text: "만만잘부", color: .white, backgroundcolor: .green, result: "유미유미")
+          case 3:
+              i(button: keyWordButton4, text: "꾸안꾸", color: .white, backgroundcolor: .green, result: "유미유미")
+          default:
+              print("Unexpected tag: \(sender.tag)")
+          }
+      }
+
+
+    func i(button: UIButton, text: String, color: UIColor, backgroundcolor: UIColor, result: String) {
         resetButtonBackgrounds()
-        resultLabel.text = "시럽 말고 매실액기스 넣어주세요"
-        resultLabel.textColor = UIColor.green
-        keyWordButton2.backgroundColor = UIColor.yellow
-        
-        
+        print("Updating button: \(text) with result: \(result)")
+        button.setTitle(text, for: .normal)
+        button.setTitleColor(color, for: .normal)
+        button.backgroundColor = backgroundcolor
+        resultLabel.text = result
+        print("🙇‍♀️\(resultLabel!)💡")
+        resultLabel.textColor = color
     }
-    
-    @IBAction func keyWordButton3AC(_ sender: Any) {
-        resetButtonBackgrounds()
-        resultLabel.text = "만족하는 만세는 잘만 부자다"
-        resultLabel.textColor = UIColor.orange
-        keyWordButton3.backgroundColor = UIColor.yellow
-     
-    }
-    
-    @IBAction func keyWordButton4AC(_ sender: UIButton) {
-        resetButtonBackgrounds()
-        resultLabel.text = "꾸민듯 안 꾸민듯"
-        resultLabel.textColor = UIColor.blue
-        keyWordButton4.backgroundColor = UIColor.yellow
-      
-        
-    }
+
     
     private func resetButtonBackgrounds() {
          let buttons = [keyWordButton1, keyWordButton2, keyWordButton3, keyWordButton4]
          for button in buttons {
-             button?.backgroundColor = UIColor.clear
+             button?.backgroundColor = UIColor.gray
          }
      }
      
