@@ -44,9 +44,9 @@ class ProfileViewController: UIViewController {
     
     private func keywordButtonSetup(){
         let buttons = [keyWordButton1, keyWordButton2, keyWordButton3, keyWordButton4]
-        keyWordButton1.setTitle("윰차", for: .normal)
-        keyWordButton2.setTitle("실매", for: .normal)
-        keyWordButton3.setTitle("만만잘부", for: .normal)
+        keyWordButton1.setTitle("갓생", for: .normal)
+        keyWordButton2.setTitle("안습", for: .normal)
+        keyWordButton3.setTitle("킹받네", for: .normal)
         keyWordButton3.titleLabel?.numberOfLines = 0
         keyWordButton3.translatesAutoresizingMaskIntoConstraints = false
         
