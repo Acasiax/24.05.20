@@ -15,6 +15,7 @@
 		AAFFFB732BF71E4300B8B428 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFFFB712BF71E4300B8B428 /* LaunchScreen.storyboard */; };
 		AAFFFB812BF7309D00B8B428 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFFB802BF7309D00B8B428 /* ProfileViewController.swift */; };
 		AAFFFB832BF87B4C00B8B428 /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFFB822BF87B4C00B8B428 /* EmotionsViewController.swift */; };
+		AAFFFC652BFCCEC900B8B428 /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFFC642BFCCEC900B8B428 /* BMIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AAFFFB742BF71E4300B8B428 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAFFFB802BF7309D00B8B428 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AAFFFB822BF87B4C00B8B428 /* EmotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
+		AAFFFC642BFCCEC900B8B428 /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				AAFFFB6F2BF71E4300B8B428 /* Assets.xcassets */,
 				AAFFFB712BF71E4300B8B428 /* LaunchScreen.storyboard */,
 				AAFFFB742BF71E4300B8B428 /* Info.plist */,
+				AAFFFC642BFCCEC900B8B428 /* BMIViewController.swift */,
 			);
 			path = 24.05.17;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAFFFB6B2BF71E4200B8B428 /* ViewController.swift in Sources */,
+				AAFFFC652BFCCEC900B8B428 /* BMIViewController.swift in Sources */,
 				AAFFFB812BF7309D00B8B428 /* ProfileViewController.swift in Sources */,
 				AAFFFB832BF87B4C00B8B428 /* EmotionsViewController.swift in Sources */,
 				AAFFFB672BF71E4200B8B428 /* AppDelegate.swift in Sources */,
