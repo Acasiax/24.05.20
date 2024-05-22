@@ -62,6 +62,7 @@
 		AAFFFB652BF71E4200B8B428 /* 24.05.17 */ = {
 			isa = PBXGroup;
 			children = (
+				AAFFFC642BFCCEC900B8B428 /* BMIViewController.swift */,
 				AAFFFB802BF7309D00B8B428 /* ProfileViewController.swift */,
 				AAFFFB822BF87B4C00B8B428 /* EmotionsViewController.swift */,
 				AAFFFB662BF71E4200B8B428 /* AppDelegate.swift */,
@@ -71,7 +72,6 @@
 				AAFFFB6F2BF71E4300B8B428 /* Assets.xcassets */,
 				AAFFFB712BF71E4300B8B428 /* LaunchScreen.storyboard */,
 				AAFFFB742BF71E4300B8B428 /* Info.plist */,
-				AAFFFC642BFCCEC900B8B428 /* BMIViewController.swift */,
 			);
 			path = 24.05.17;
 			sourceTree = "<group>";

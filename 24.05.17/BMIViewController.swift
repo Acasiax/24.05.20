@@ -12,7 +12,6 @@ class BMIViewController: UIViewController {
     
     @IBOutlet var titleLB: UILabel!
     @IBOutlet var subTitle: UILabel!
-    
     @IBOutlet var iconImage: UIImageView!
     
     
@@ -44,6 +43,15 @@ class BMIViewController: UIViewController {
         textUISetup()
         setupButtonActions()
         setupTapGesture()
+        
+        // UserDefaults에서 키와 몸무게 불러오기
+           if let savedHeight = UserDefaults.standard.value(forKey: "userHeight") as? Double {
+               heghtTextField.text = "\(savedHeight)"
+           }
+           if let savedWeight = UserDefaults.standard.value(forKey: "userWeight") as? Double {
+               kgTextField.text = "\(savedWeight)"
+           }
+        
     }
     
         func textUISetup() {
@@ -59,21 +67,28 @@ class BMIViewController: UIViewController {
         func setupButtonActions() {
             resultButton.addTarget(self, action: #selector(showBMIResult), for: .touchUpInside)
         }
-        
-        @objc func showBMIResult() {
-            guard let heightText = heghtTextField.text, let height = Double(heightText),
-                  let weightText = kgTextField.text, let weight = Double(weightText) else {
-                showAlert(message: "유효한 키와 몸무게를 입력하세요.")
-                return
-            }
-            
-            let heightInMeters = height / 100
-            let bmi = weight / (heightInMeters * heightInMeters)
-            let formattedBMI = String(format: "%.2f", bmi)
-            
-            showAlert(message: "당신의 BMI 지수는 \(formattedBMI)입니다.")
+ 
+    
+    @objc func showBMIResult() {
+        guard let heightText = heghtTextField.text, let height = Double(heightText),
+              let weightText = kgTextField.text, let weight = Double(weightText) else {
+            showAlert(message: "유효한 키와 몸무게를 입력하세요.")
+            return
         }
         
+        // UserDefaults에 키와 몸무게 저장
+        UserDefaults.standard.set(height, forKey: "userHeight")
+        UserDefaults.standard.set(weight, forKey: "userWeight")
+        
+        let heightInMeters = height / 100
+        let bmi = weight / (heightInMeters * heightInMeters)
+        let formattedBMI = String(format: "%.2f", bmi)
+        
+        showAlert(message: "당신의 BMI 지수는 \(formattedBMI)입니다.")
+    }
+
+    
+    
         func showAlert(message: String) {
             let alert = UIAlertController(title: "BMI 결과", message: message, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)

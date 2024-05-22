@@ -26,13 +26,24 @@ class EmotionsViewController: UIViewController {
     
     
     @IBOutlet var emotionLabels: [UILabel]!
+    
+    
+    @IBOutlet var resetButton: UIButton!
+    
+    
+    
     var emotionCounts = [Int](repeating: 0, count: 9)
     let emotionTexts = ["행복해", "사랑해", "좋아해", "당황해", "속상해", "우울해", "심심해", "피곤해", "미워해"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        // UserDefaults에서 저장된 감정 카운트를 불러오기
+               if let savedEmotionCounts = UserDefaults.standard.array(forKey: "emotionCounts") as? [Int] {
+                   emotionCounts = savedEmotionCounts
+                   print("🤍\(emotionCounts)")
+               }
         updateLabels()
-        
     }
 
     
@@ -40,6 +51,7 @@ class EmotionsViewController: UIViewController {
         //enumerated() 순회
         for (index, label) in emotionLabels.enumerated() {
             label.text = "\(emotionTexts[index])\(emotionCounts[index])"
+      print("👩‍🌾\(emotionTexts[index])\(emotionCounts[index])")
         }
     }
     
@@ -54,14 +66,31 @@ class EmotionsViewController: UIViewController {
     
     @IBAction func emotionButtonTapped(_ sender: UIButton) {
         let tag = sender.tag
-        emotionCounts[tag] += 1
-        updateLabelGG(for: tag)
+        if tag >= 0 && tag < emotionCounts.count {
+                emotionCounts[tag] += 1
+                updateLabelGG(for: tag)
+                UserDefaults.standard.set(emotionCounts, forKey: "emotionCounts")
+            }
     }
     
   
     private func updateLabelGG(for index: Int) {
         emotionLabels[index].text = "\(emotionTexts[index])\(emotionCounts[index])"
     }
+    
+    
+    @IBAction func resetAC(_ sender: UIButton) {
+      
+        // 감정 카운트를 0으로 초기화
+        emotionCounts = [Int](repeating: 0, count: 9)
+        
+        // 라벨 업데이트
+        updateLabels()
+        
+    }
+    
+    
+    
 }
 
 
