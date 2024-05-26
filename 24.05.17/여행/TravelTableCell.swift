@@ -45,7 +45,7 @@ class TravelTableCell: UITableViewCell {
     func dateFormat(dateString: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyMMdd"
-        
+                
         guard let date = dateFormatter.date(from: dateString) else { return "" }
         dateFormatter.dateFormat = "yy년 M월 d일"
         return dateFormatter.string(from: date)

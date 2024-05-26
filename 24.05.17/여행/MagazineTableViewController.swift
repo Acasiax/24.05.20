@@ -57,7 +57,7 @@ class MagazineTableViewController: UITableViewController {
            print(indexPath)
            guard let url = URL(string: magazineInfoList[indexPath.row].link) else { return }
            
-           // 선택된 링크 열기
+           // 선택된 링크 열기                      
            UIApplication.shared.open(url, options: [:], completionHandler: nil)
        }
    }
