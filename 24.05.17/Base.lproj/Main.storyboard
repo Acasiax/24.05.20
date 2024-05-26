@@ -735,7 +735,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-8T-zFZ">
-                                        <rect key="frame" x="16" y="16" width="43.333333333333329" height="39.333333333333336"/>
+                                        <rect key="frame" x="16.000000000000004" y="16" width="43.333333333333343" height="39.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-9f-uSu">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="20.333333333333332"/>
@@ -1431,11 +1431,9 @@
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="K9f-s6-FRc">
                                 <rect key="frame" x="0.0" y="103" width="393" height="56"/>
-                                <color key="backgroundColor" red="0.91946541690000005" green="0.68166947" blue="0.96790462730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="ccu-fu-I51"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.94210057749999998" green="0.71360167679999997" blue="0.96790462730000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="XNQ-BL-l6g" id="1Ee-g9-wTM"/>
