@@ -1405,7 +1405,7 @@
             </objects>
             <point key="canvasLocation" x="1037.4045801526718" y="1833.8028169014085"/>
         </scene>
-        <!--Item 2-->
+        <!--빈공간-->
         <scene sceneID="bpp-27-Mut">
             <objects>
                 <viewController id="FPd-pZ-U8g" sceneMemberID="viewController">
@@ -1415,13 +1415,13 @@
                         <viewLayoutGuide key="safeArea" id="c65-nP-Mya"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="JOS-kz-KhY"/>
+                    <tabBarItem key="tabBarItem" title="빈공간" image="paperplane.circle" catalog="system" id="JOS-kz-KhY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYL-mq-TIn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2010" y="3358"/>
         </scene>
-        <!--Food View Controller-->
+        <!--문래동 맛집-->
         <scene sceneID="qhE-QS-rkp">
             <objects>
                 <viewController id="XNQ-BL-l6g" customClass="foodViewController" customModule="_4_05_17" customModuleProvider="target" sceneMemberID="viewController">
@@ -1468,7 +1468,7 @@
                             <constraint firstItem="NPT-Vw-oOr" firstAttribute="trailing" secondItem="Uxu-nH-e5v" secondAttribute="trailing" id="y8Q-9W-r9A"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QNb-t5-f3M"/>
+                    <navigationItem key="navigationItem" title="문래동 맛집" id="QNb-t5-f3M"/>
                     <connections>
                         <outlet property="tableView" destination="NPT-Vw-oOr" id="MBI-do-uhX"/>
                         <outlet property="textField" destination="K9f-s6-FRc" id="ZTt-pS-hVe"/>
@@ -1530,6 +1530,7 @@
         <image name="image" width="147" height="229.33332824707031"/>
         <image name="link.circle.fill" catalog="system" width="128" height="123"/>
         <image name="moon.fill" catalog="system" width="128" height="123"/>
+        <image name="paperplane.circle" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="slime1" width="278" height="258"/>
         <image name="slime2" width="278" height="258"/>
