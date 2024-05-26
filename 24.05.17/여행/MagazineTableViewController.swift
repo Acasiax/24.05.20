@@ -30,7 +30,7 @@ class MagazineTableViewController: UITableViewController {
            // 데이터를 다시 불러오거나 업데이트가 필요한 경우
            // reloadData() 메소드를 호출하여 테이블 뷰를 갱신하는 코드임!
            tableView.reloadData()
-           print("🥕viewWillAppea 호출, reloadData 갱신")
+           print("🥕viewWillAppea 호출, reloadData 갱신🥕")
        }
        
     
@@ -42,7 +42,7 @@ class MagazineTableViewController: UITableViewController {
        
        // 각 행에 대한 셀 설정하기
        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           //수업때 배운 가드문 사용하여 셀 초기화 하기
+           //🌱수업때 배운 가드문 사용하여 셀 초기화 하기
            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineCell", for: indexPath) as? TravelTableCell else {
                return UITableViewCell()
            }

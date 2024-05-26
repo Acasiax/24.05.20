@@ -10,7 +10,6 @@ import Kingfisher
 
 class TravelTableCell: UITableViewCell {
     
-    
     @IBOutlet var magazineImageView: UIImageView!
     @IBOutlet var magazineDateLB: UILabel!
     @IBOutlet var magazineSubTitleLB: UILabel!
@@ -23,7 +22,7 @@ class TravelTableCell: UITableViewCell {
         magazineTitleLB.font = UIFont.systemFont(ofSize: 20, weight: .bold)
       
         
-        // 부제목 레이블 설정
+        //서브 레이블 설정
         magazineSubTitleLB.text = subtitle
         magazineSubTitleLB.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         magazineSubTitleLB.textColor = .gray
