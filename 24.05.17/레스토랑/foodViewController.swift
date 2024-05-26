@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 class foodViewController: UIViewController, UISearchBarDelegate {
-    @IBOutlet var textField: UISearchBar!
+    @IBOutlet var textSearchbar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     
     var restaurantList = RestaurantList().restaurantArray
@@ -19,7 +19,8 @@ class foodViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        textField.delegate = self
+        textSearchbar.delegate = self
+        textSearchbar.placeholder = "음식점을 입력하세요"
         filteredRestaurantList = restaurantList // 초기화시 전체 리스트를 보여줌
         tableView.register(MyTableViewCell.nib(), forCellReuseIdentifier: MyTableViewCell.identifierName)
     }
