@@ -39,7 +39,7 @@ class SetUpTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sectionTitles.count
     }
-
+     // 필수매서드,count로 해서 닐 방지하기
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellData[section].count
     }

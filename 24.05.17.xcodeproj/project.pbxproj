@@ -10,7 +10,6 @@
 		AA05F1CA2C03527700080107 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1C82C03527700080107 /* MyTableViewCell.swift */; };
 		AA05F1CB2C03527700080107 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F1C92C03527700080107 /* MyTableViewCell.xib */; };
 		AA05F1CD2C03529F00080107 /* foodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1CC2C03529F00080107 /* foodViewController.swift */; };
-		AA05F1D02C036D0700080107 /* testVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1CF2C036D0700080107 /* testVCViewController.swift */; };
 		AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */; };
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
@@ -32,7 +31,6 @@
 		AA05F1C82C03527700080107 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		AA05F1C92C03527700080107 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		AA05F1CC2C03529F00080107 /* foodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodViewController.swift; sourceTree = "<group>"; };
-		AA05F1CF2C036D0700080107 /* testVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVCViewController.swift; sourceTree = "<group>"; };
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
@@ -70,10 +68,18 @@
 				AA05F1CC2C03529F00080107 /* foodViewController.swift */,
 				AA05F1C82C03527700080107 /* MyTableViewCell.swift */,
 				AA05F1C92C03527700080107 /* MyTableViewCell.xib */,
-				AA05F1CF2C036D0700080107 /* testVCViewController.swift */,
 			);
 			name = "레스토랑";
 			path = "레스토랑";
+			sourceTree = "<group>";
+		};
+		AA05F1D12C037A2900080107 /* 카카오톡 */ = {
+			isa = PBXGroup;
+			children = (
+				AAFFFC9F2BFF792700B8B428 /* SetUpTableViewController.swift */,
+			);
+			name = "카카오톡";
+			path = "카카오톡";
 			sourceTree = "<group>";
 		};
 		AA0674632C02F9B100DE8E58 /* 여행 */ = {
@@ -120,7 +126,7 @@
 				AA05F1CE2C03574900080107 /* 레스토랑 */,
 				AA0674632C02F9B100DE8E58 /* 여행 */,
 				AADE80F12C03114500302F01 /* BMI랑 감정이랑 신조어 */,
-				AAFFFC9F2BFF792700B8B428 /* SetUpTableViewController.swift */,
+				AA05F1D12C037A2900080107 /* 카카오톡 */,
 				AAFFFB662BF71E4200B8B428 /* AppDelegate.swift */,
 				AAFFFB682BF71E4200B8B428 /* SceneDelegate.swift */,
 				AAFFFB6A2BF71E4200B8B428 /* ViewController.swift */,
@@ -217,7 +223,6 @@
 				AAFFFB812BF7309D00B8B428 /* ProfileViewController.swift in Sources */,
 				AA05F1CD2C03529F00080107 /* foodViewController.swift in Sources */,
 				AA05F1CA2C03527700080107 /* MyTableViewCell.swift in Sources */,
-				AA05F1D02C036D0700080107 /* testVCViewController.swift in Sources */,
 				AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */,
 				AAFFFCA02BFF792700B8B428 /* SetUpTableViewController.swift in Sources */,
 				AAFFFB832BF87B4C00B8B428 /* EmotionsViewController.swift in Sources */,
