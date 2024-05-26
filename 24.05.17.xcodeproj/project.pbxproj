@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		AA05F1CA2C03527700080107 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1C82C03527700080107 /* MyTableViewCell.swift */; };
 		AA05F1CB2C03527700080107 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F1C92C03527700080107 /* MyTableViewCell.xib */; };
-		AA05F1CD2C03529F00080107 /* aaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1CC2C03529F00080107 /* aaViewController.swift */; };
+		AA05F1CD2C03529F00080107 /* foodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1CC2C03529F00080107 /* foodViewController.swift */; };
+		AA05F1D02C036D0700080107 /* testVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1CF2C036D0700080107 /* testVCViewController.swift */; };
 		AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */; };
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
 		AA06746C2C02FC8300DE8E58 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AA06746B2C02FC8300DE8E58 /* Kingfisher */; };
 		AADE80F72C034A2500302F01 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE80F62C034A2500302F01 /* Restaurant.swift */; };
-		AADE80F92C034A4400302F01 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE80F82C034A4400302F01 /* RestaurantViewController.swift */; };
 		AAFFFB672BF71E4200B8B428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFFB662BF71E4200B8B428 /* AppDelegate.swift */; };
 		AAFFFB692BF71E4200B8B428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFFB682BF71E4200B8B428 /* SceneDelegate.swift */; };
 		AAFFFB6B2BF71E4200B8B428 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFFB6A2BF71E4200B8B428 /* ViewController.swift */; };
@@ -31,12 +31,12 @@
 /* Begin PBXFileReference section */
 		AA05F1C82C03527700080107 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		AA05F1C92C03527700080107 /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
-		AA05F1CC2C03529F00080107 /* aaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aaViewController.swift; sourceTree = "<group>"; };
+		AA05F1CC2C03529F00080107 /* foodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodViewController.swift; sourceTree = "<group>"; };
+		AA05F1CF2C036D0700080107 /* testVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVCViewController.swift; sourceTree = "<group>"; };
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
 		AADE80F62C034A2500302F01 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		AADE80F82C034A4400302F01 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		AAFFFB632BF71E4200B8B428 /* 24.05.17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 24.05.17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFFFB662BF71E4200B8B428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAFFFB682BF71E4200B8B428 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,10 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				AADE80F62C034A2500302F01 /* Restaurant.swift */,
-				AADE80F82C034A4400302F01 /* RestaurantViewController.swift */,
+				AA05F1CC2C03529F00080107 /* foodViewController.swift */,
 				AA05F1C82C03527700080107 /* MyTableViewCell.swift */,
 				AA05F1C92C03527700080107 /* MyTableViewCell.xib */,
-				AA05F1CC2C03529F00080107 /* aaViewController.swift */,
+				AA05F1CF2C036D0700080107 /* testVCViewController.swift */,
 			);
 			name = "레스토랑";
 			path = "레스토랑";
@@ -211,13 +211,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AADE80F72C034A2500302F01 /* Restaurant.swift in Sources */,
-				AADE80F92C034A4400302F01 /* RestaurantViewController.swift in Sources */,
 				AAFFFB6B2BF71E4200B8B428 /* ViewController.swift in Sources */,
 				AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */,
 				AAFFFC652BFCCEC900B8B428 /* BMIViewController.swift in Sources */,
 				AAFFFB812BF7309D00B8B428 /* ProfileViewController.swift in Sources */,
-				AA05F1CD2C03529F00080107 /* aaViewController.swift in Sources */,
+				AA05F1CD2C03529F00080107 /* foodViewController.swift in Sources */,
 				AA05F1CA2C03527700080107 /* MyTableViewCell.swift in Sources */,
+				AA05F1D02C036D0700080107 /* testVCViewController.swift in Sources */,
 				AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */,
 				AAFFFCA02BFF792700B8B428 /* SetUpTableViewController.swift in Sources */,
 				AAFFFB832BF87B4C00B8B428 /* EmotionsViewController.swift in Sources */,
