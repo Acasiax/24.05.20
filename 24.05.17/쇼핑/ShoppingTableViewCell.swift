@@ -23,7 +23,18 @@ class ShoppingTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        
     }
+    
+    
+    func configure(with item: ShoppingItem) {
+          shoppingText.text = item.title
+          
+          let checkBoxImage = item.isCompleted ? UIImage(systemName: "checkmark.square") : UIImage(systemName: "square")
+          checkBox1.setImage(checkBoxImage, for: .normal)
+          
+          let starButtonImage = item.isFavorite ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+          starButton1.setImage(starButtonImage, for: .normal)
+      }
+    
     
 }

@@ -24,7 +24,7 @@
                             <constraint firstAttribute="width" secondItem="zLq-qm-1Kc" secondAttribute="height" id="okK-BJ-sYl"/>
                         </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCV-4Y-6EH">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
