@@ -35,7 +35,7 @@ class CitiyTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         //  🌟tableView.rowHeight = 120 //이거 말고 오토매틱 디멘션 사용하기🌟
-        cityImage.layer.cornerRadius = 10
+        cityImage.layer.cornerRadius = 10 
         cityImage.clipsToBounds = true
         // 폰트 스타일 설정
                 titleLB.font = UIFont.boldSystemFont(ofSize: 16)

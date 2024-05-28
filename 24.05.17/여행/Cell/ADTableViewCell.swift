@@ -27,7 +27,7 @@ class ADTableViewCell: UITableViewCell {
     
     private func configureUI() {
           
-        self.contentView.backgroundColor = UIColor.systemPink      
+        self.contentView.backgroundColor = RandomColor()
           ADTitleLabel.textColor = .black
           ADTitleLabel.font = UIFont.systemFont(ofSize: 16)
           ADTitleLabel.numberOfLines = 0
@@ -45,4 +45,13 @@ class ADTableViewCell: UITableViewCell {
     func TextTravelconfigure(with travel: Travel) {
             ADTitleLabel.text = travel.title
         }
+    
+    //함수로 랜덤 기능 분리
+    func RandomColor() -> UIColor {
+        let colors: [UIColor] = [.systemPink, .green, .blue]
+        let randomIndex = Int.random(in: 0..<colors.count)
+                return colors[randomIndex]
+    }
+    
+    
 }
