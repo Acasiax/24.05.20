@@ -16,6 +16,9 @@
 		AA05F1EA2C04BA6000080107 /* CitiyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F1E82C04BA6000080107 /* CitiyTableViewCell.xib */; };
 		AA05F1EF2C04C80300080107 /* ADTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1ED2C04C80300080107 /* ADTableViewCell.swift */; };
 		AA05F1F02C04C80300080107 /* ADTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F1EE2C04C80300080107 /* ADTableViewCell.xib */; };
+		AA05F2302C06333D00080107 /* shoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F22F2C06333D00080107 /* shoppingListViewController.swift */; };
+		AA05F2332C06346D00080107 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2312C06346D00080107 /* ShoppingTableViewCell.swift */; };
+		AA05F2342C06346D00080107 /* ShoppingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F2322C06346D00080107 /* ShoppingTableViewCell.xib */; };
 		AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */; };
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
@@ -43,6 +46,9 @@
 		AA05F1E82C04BA6000080107 /* CitiyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiyTableViewCell.xib; sourceTree = "<group>"; };
 		AA05F1ED2C04C80300080107 /* ADTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADTableViewCell.swift; sourceTree = "<group>"; };
 		AA05F1EE2C04C80300080107 /* ADTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADTableViewCell.xib; sourceTree = "<group>"; };
+		AA05F22F2C06333D00080107 /* shoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingListViewController.swift; sourceTree = "<group>"; };
+		AA05F2312C06346D00080107 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
+		AA05F2322C06346D00080107 /* ShoppingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingTableViewCell.xib; sourceTree = "<group>"; };
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
@@ -115,6 +121,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		AA05F22E2C06331200080107 /* 쇼핑 */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F22F2C06333D00080107 /* shoppingListViewController.swift */,
+				AA05F2312C06346D00080107 /* ShoppingTableViewCell.swift */,
+				AA05F2322C06346D00080107 /* ShoppingTableViewCell.xib */,
+			);
+			name = "쇼핑";
+			path = "쇼핑";
+			sourceTree = "<group>";
+		};
 		AA0674632C02F9B100DE8E58 /* 여행 */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +174,7 @@
 		AAFFFB652BF71E4200B8B428 /* 24.05.17 */ = {
 			isa = PBXGroup;
 			children = (
+				AA05F22E2C06331200080107 /* 쇼핑 */,
 				AA05F1CE2C03574900080107 /* 레스토랑 */,
 				AA0674632C02F9B100DE8E58 /* 여행 */,
 				AADE80F12C03114500302F01 /* BMI랑 감정이랑 신조어 */,
@@ -242,6 +260,7 @@
 				AA05F1EA2C04BA6000080107 /* CitiyTableViewCell.xib in Resources */,
 				AAFFFB702BF71E4300B8B428 /* Assets.xcassets in Resources */,
 				AAFFFB6E2BF71E4200B8B428 /* Main.storyboard in Resources */,
+				AA05F2342C06346D00080107 /* ShoppingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,10 +273,12 @@
 			files = (
 				AADE80F72C034A2500302F01 /* Restaurant.swift in Sources */,
 				AAFFFB6B2BF71E4200B8B428 /* ViewController.swift in Sources */,
+				AA05F2302C06333D00080107 /* shoppingListViewController.swift in Sources */,
 				AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */,
 				AAFFFC652BFCCEC900B8B428 /* BMIViewController.swift in Sources */,
 				AAFFFB812BF7309D00B8B428 /* ProfileViewController.swift in Sources */,
 				AA05F1EF2C04C80300080107 /* ADTableViewCell.swift in Sources */,
+				AA05F2332C06346D00080107 /* ShoppingTableViewCell.swift in Sources */,
 				AA05F1CD2C03529F00080107 /* foodViewController.swift in Sources */,
 				AA05F1CA2C03527700080107 /* MyTableViewCell.swift in Sources */,
 				AA05F1E22C04B1C800080107 /* TravelModel.swift in Sources */,
