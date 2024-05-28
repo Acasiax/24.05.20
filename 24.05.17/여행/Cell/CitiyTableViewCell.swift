@@ -17,10 +17,15 @@ class CitiyTableViewCell: UITableViewCell {
     @IBOutlet var saveCount: UILabel!
     
     
-    //버튼리스트를 여기다가 선언하지 않되고 말고 뷰디드로드에 선언하면 됨
-    //근데 레이지 var 를 넣으면 가능함. 왜 lazy써야 하는지 노션에 정리.
-    //버튼이 초기화 되는 시점과 리스트가 초기화 되는 시점이 같기 떄문에 찰나의 순간이라도 미루는 것
-    //스택뷰에서도 stackView lazy를 사용하게 됨. 이것도 노션에 정리
+//    버튼 리스트 초기화 위치
+//    viewDidLoad에서 선언
+//    lazy var를 사용하여 초기화 시점을 지연
+//    lazy var 사용 이유
+//    초기화 시점을 지연시켜 버튼과 리스트가 동시에 초기화되는 문제를 해결
+//    스택뷰 초기화
+//    스택뷰에서도 lazy var를 사용하여 초기화 시점을 지연
+    
+    
     static let indentifier1 = "CitiyTableViewCell"
     static func nib() -> UINib{
         return UINib(nibName: indentifier1, bundle: nil)
@@ -35,6 +40,7 @@ class CitiyTableViewCell: UITableViewCell {
         // 폰트 스타일 설정
                 titleLB.font = UIFont.boldSystemFont(ofSize: 16)
                 subTitleLB.font = UIFont.systemFont(ofSize: 14)
+                subTitleLB.textColor = .darkGray
                 subTitleLB.numberOfLines = 0
                 pointLB.font = UIFont.systemFont(ofSize: 14)
                 pointLB.textColor = .systemYellow
