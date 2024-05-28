@@ -11,5 +11,5 @@ import UIKit
 struct ShoppingItem {
     var title: String
     var isCompleted: Bool
-    var isFavorite: Bool
+    var like: Bool
 }

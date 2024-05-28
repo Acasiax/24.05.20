@@ -16,10 +16,10 @@ class shoppingListViewController: UIViewController {
     
     
     lazy var shoppingItems: [ShoppingItem] = [
-            ShoppingItem(title: "그립툭 구매하기", isCompleted: true, isFavorite: true),
-            ShoppingItem(title: "사이다 구매", isCompleted: false, isFavorite: false),
-            ShoppingItem(title: "아이패드 케이스 최저가 알아보기", isCompleted: true, isFavorite: true),
-            ShoppingItem(title: "양말", isCompleted: false, isFavorite: true)
+        ShoppingItem(title: "그립툭 구매하기", isCompleted: true, like: true),
+        ShoppingItem(title: "사이다 구매", isCompleted: false, like: false),
+        ShoppingItem(title: "아이패드 케이스 최저가 알아보기", isCompleted: true, like: true),
+        ShoppingItem(title: "양말", isCompleted: false, like: true)
         ]
        
         override func viewDidLoad() {
@@ -50,7 +50,7 @@ class shoppingListViewController: UIViewController {
            
             // 즐겨찾기 버튼임
             cell.starButton1.tag = indexPath.row
-            cell.starButton1.addTarget(self, action: #selector(toggleFavorite(_:)), for: .touchUpInside)
+            cell.starButton1.addTarget(self, action: #selector(toggleLikeStar(_:)), for: .touchUpInside)
            
             return cell
         }
@@ -61,9 +61,9 @@ class shoppingListViewController: UIViewController {
             shoppingTableView.reloadData()
         }
        
-        @objc func toggleFavorite(_ sender: UIButton) {
+        @objc func toggleLikeStar(_ sender: UIButton) {
             let index = sender.tag
-            shoppingItems[index].isFavorite.toggle()
+            shoppingItems[index].like.toggle()
             shoppingTableView.reloadData()
         }
     }

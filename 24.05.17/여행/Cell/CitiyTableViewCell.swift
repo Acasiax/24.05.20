@@ -43,6 +43,7 @@ class CitiyTableViewCell: UITableViewCell {
                 
                 // 이미지 초기 설정
                 heartImageView.image = UIImage(systemName: "heart")
+                heartImageView.tintColor = .red
             }
 
             override func setSelected(_ selected: Bool, animated: Bool) {
@@ -54,7 +55,7 @@ class CitiyTableViewCell: UITableViewCell {
                 subTitleLB.text = travel.description
                 pointLB.text = "\(travel.grade ?? 0.0)🥕"
                 var savedata = travel.save?.formatted()
-                saveCount.text = "저장 \(savedata ?? "d")"
+                saveCount.text = "저장 \(savedata ?? "미지수")"
                 
                 if let urlString = travel.travel_image, let url = URL(string: urlString) {
                     URLSession.shared.dataTask(with: url) { data, response, error in
