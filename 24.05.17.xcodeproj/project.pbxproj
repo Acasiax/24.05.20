@@ -19,6 +19,7 @@
 		AA05F2302C06333D00080107 /* shoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F22F2C06333D00080107 /* shoppingListViewController.swift */; };
 		AA05F2332C06346D00080107 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2312C06346D00080107 /* ShoppingTableViewCell.swift */; };
 		AA05F2342C06346D00080107 /* ShoppingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F2322C06346D00080107 /* ShoppingTableViewCell.xib */; };
+		AA05F2362C0637C200080107 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2352C0637C200080107 /* ShoppingItem.swift */; };
 		AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */; };
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
@@ -49,6 +50,7 @@
 		AA05F22F2C06333D00080107 /* shoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingListViewController.swift; sourceTree = "<group>"; };
 		AA05F2312C06346D00080107 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 		AA05F2322C06346D00080107 /* ShoppingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingTableViewCell.xib; sourceTree = "<group>"; };
+		AA05F2352C0637C200080107 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				AA05F22F2C06333D00080107 /* shoppingListViewController.swift */,
 				AA05F2312C06346D00080107 /* ShoppingTableViewCell.swift */,
 				AA05F2322C06346D00080107 /* ShoppingTableViewCell.xib */,
+				AA05F2352C0637C200080107 /* ShoppingItem.swift */,
 			);
 			name = "쇼핑";
 			path = "쇼핑";
@@ -279,6 +282,7 @@
 				AAFFFB812BF7309D00B8B428 /* ProfileViewController.swift in Sources */,
 				AA05F1EF2C04C80300080107 /* ADTableViewCell.swift in Sources */,
 				AA05F2332C06346D00080107 /* ShoppingTableViewCell.swift in Sources */,
+				AA05F2362C0637C200080107 /* ShoppingItem.swift in Sources */,
 				AA05F1CD2C03529F00080107 /* foodViewController.swift in Sources */,
 				AA05F1CA2C03527700080107 /* MyTableViewCell.swift in Sources */,
 				AA05F1E22C04B1C800080107 /* TravelModel.swift in Sources */,

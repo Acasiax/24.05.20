@@ -13,6 +13,13 @@ class shoppingListViewController: UIViewController {
     @IBOutlet var addButton: UIButton!
     @IBOutlet var shoppingTable: UITableView!
     
+    var shoppingItems: [ShoppingItem] = [
+           ShoppingItem(title: "그림툭 구매하기", isCompleted: true, isFavorite: true),
+           ShoppingItem(title: "사이다 구매", isCompleted: false, isFavorite: false),
+           ShoppingItem(title: "아이패드 케이스 최저가 알아보기", isCompleted: true, isFavorite: true),
+           ShoppingItem(title: "양말", isCompleted: false, isFavorite: true)
+       ]
+       
     
     override func viewDidLoad() {
         super.viewDidLoad()
