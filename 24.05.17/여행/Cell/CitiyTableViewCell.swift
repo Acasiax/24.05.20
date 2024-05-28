@@ -48,7 +48,7 @@ class CitiyTableViewCell: UITableViewCell {
             func configure(with travel: Travel) {
                 titleLB.text = travel.title
                 subTitleLB.text = travel.description
-                pointLB.text = "\(travel.grade ?? 0.0)★"
+                pointLB.text = "\(travel.grade ?? 0.0)🥕"
                 saveCount.text = "저장 \(travel.save ?? 0)"
                 
                 if let urlString = travel.travel_image, let url = URL(string: urlString) {
