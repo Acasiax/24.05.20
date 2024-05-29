@@ -25,6 +25,9 @@
 		AA05F2412C07028E00080107 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F23F2C07028D00080107 /* SettingViewController.swift */; };
 		AA05F2422C07028E00080107 /* BrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2402C07028E00080107 /* BrownViewController.swift */; };
 		AA05F2442C07068A00080107 /* ADINTOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2432C07068A00080107 /* ADINTOViewController.swift */; };
+		AA05F2482C07191000080107 /* work0529ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2472C07191000080107 /* work0529ViewController.swift */; };
+		AA05F24B2C072F9800080107 /* work0529TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2492C072F9800080107 /* work0529TableViewCell.swift */; };
+		AA05F24C2C072F9800080107 /* work0529TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F24A2C072F9800080107 /* work0529TableViewCell.xib */; };
 		AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */; };
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
@@ -61,6 +64,9 @@
 		AA05F23F2C07028D00080107 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		AA05F2402C07028E00080107 /* BrownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrownViewController.swift; sourceTree = "<group>"; };
 		AA05F2432C07068A00080107 /* ADINTOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADINTOViewController.swift; sourceTree = "<group>"; };
+		AA05F2472C07191000080107 /* work0529ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = work0529ViewController.swift; sourceTree = "<group>"; };
+		AA05F2492C072F9800080107 /* work0529TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = work0529TableViewCell.swift; sourceTree = "<group>"; };
+		AA05F24A2C072F9800080107 /* work0529TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = work0529TableViewCell.xib; sourceTree = "<group>"; };
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
@@ -120,6 +126,9 @@
 				AA05F23D2C07024E00080107 /* CityInfo.swift */,
 				AA05F1E12C04B1C800080107 /* TravelModel.swift */,
 				AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */,
+				AA05F2472C07191000080107 /* work0529ViewController.swift */,
+				AA05F2492C072F9800080107 /* work0529TableViewCell.swift */,
+				AA05F24A2C072F9800080107 /* work0529TableViewCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA05F1F02C04C80300080107 /* ADTableViewCell.xib in Resources */,
+				AA05F24C2C072F9800080107 /* work0529TableViewCell.xib in Resources */,
 				AAFFFB732BF71E4300B8B428 /* LaunchScreen.storyboard in Resources */,
 				AA05F1CB2C03527700080107 /* MyTableViewCell.xib in Resources */,
 				AA05F1EA2C04BA6000080107 /* CitiyTableViewCell.xib in Resources */,
@@ -300,12 +310,14 @@
 				AA05F2362C0637C200080107 /* ShoppingItem.swift in Sources */,
 				AA05F1CD2C03529F00080107 /* foodViewController.swift in Sources */,
 				AA05F1CA2C03527700080107 /* MyTableViewCell.swift in Sources */,
+				AA05F2482C07191000080107 /* work0529ViewController.swift in Sources */,
 				AA05F1E22C04B1C800080107 /* TravelModel.swift in Sources */,
 				AA05F1E92C04BA6000080107 /* CitiyTableViewCell.swift in Sources */,
 				AA05F1E62C04B6D800080107 /* PopularCitiesViewController.swift in Sources */,
 				AA05F23E2C07024E00080107 /* CityInfo.swift in Sources */,
 				AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */,
 				AAFFFCA02BFF792700B8B428 /* SetUpTableViewController.swift in Sources */,
+				AA05F24B2C072F9800080107 /* work0529TableViewCell.swift in Sources */,
 				AA05F23C2C06FBCC00080107 /* TavelInToViewController.swift in Sources */,
 				AA05F2412C07028E00080107 /* SettingViewController.swift in Sources */,
 				AA05F2422C07028E00080107 /* BrownViewController.swift in Sources */,

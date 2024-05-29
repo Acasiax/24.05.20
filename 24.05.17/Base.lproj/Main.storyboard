@@ -735,7 +735,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-8T-zFZ">
-                                        <rect key="frame" x="16" y="16.000000000000004" width="43.333333333333336" height="39.333333333333343"/>
+                                        <rect key="frame" x="16" y="16" width="43.333333333333329" height="39.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-9f-uSu">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="20.333333333333332"/>
@@ -1545,6 +1545,7 @@
                         <segue destination="Vpj-6V-iXx" kind="relationship" relationship="viewControllers" id="HwO-96-P1I"/>
                         <segue destination="hjE-ur-fuz" kind="relationship" relationship="viewControllers" id="6RX-UU-r5y"/>
                         <segue destination="YIy-Ws-6Uu" kind="relationship" relationship="viewControllers" id="gnI-Et-1eO"/>
+                        <segue destination="aFZ-gE-Jfq" kind="relationship" relationship="viewControllers" id="vIR-ly-V1b"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJk-Vl-rao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1606,7 +1607,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uuu-Xn-Pym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2074" y="4211"/>
+            <point key="canvasLocation" x="1943" y="5013"/>
         </scene>
         <!--Shopping List View Controller-->
         <scene sceneID="l5s-0b-rKf">
@@ -1637,7 +1638,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScF-Oe-hm6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2966" y="4211"/>
+            <point key="canvasLocation" x="2836" y="5013"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZRU-XO-Pd4">
@@ -1655,7 +1656,68 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDD-Yu-Yto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="4211"/>
+            <point key="canvasLocation" x="964" y="5013"/>
+        </scene>
+        <!--Work0529 View Controller-->
+        <scene sceneID="P2r-qQ-UIx">
+            <objects>
+                <viewController storyboardIdentifier="PopularCityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vhh-li-7vt" customClass="work0529ViewController" customModule="_4_05_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bqX-kA-ulN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ncX-mo-kPp">
+                                <rect key="frame" x="16" y="132" width="361" height="32"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="isE-fn-e8z">
+                                <rect key="frame" x="0.0" y="187" width="393" height="582"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Y6-uE-ixg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Y6-uE-ixg" firstAttribute="trailing" secondItem="isE-fn-e8z" secondAttribute="trailing" id="Q6e-nD-sKq"/>
+                            <constraint firstItem="isE-fn-e8z" firstAttribute="top" secondItem="ncX-mo-kPp" secondAttribute="bottom" constant="24" id="V5B-DX-PKe"/>
+                            <constraint firstItem="ncX-mo-kPp" firstAttribute="top" secondItem="9Y6-uE-ixg" secondAttribute="top" constant="29" id="Y3x-dw-vvn"/>
+                            <constraint firstItem="9Y6-uE-ixg" firstAttribute="bottom" secondItem="isE-fn-e8z" secondAttribute="bottom" id="fqB-Rf-ez6"/>
+                            <constraint firstItem="ncX-mo-kPp" firstAttribute="leading" secondItem="9Y6-uE-ixg" secondAttribute="leading" constant="16" id="nD1-Vy-umH"/>
+                            <constraint firstItem="isE-fn-e8z" firstAttribute="leading" secondItem="9Y6-uE-ixg" secondAttribute="leading" id="nQd-d5-ymX"/>
+                            <constraint firstItem="9Y6-uE-ixg" firstAttribute="trailing" secondItem="ncX-mo-kPp" secondAttribute="trailing" constant="16" id="tjw-mp-p3d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rTm-ys-gdh"/>
+                    <connections>
+                        <outlet property="worktableview" destination="isE-fn-e8z" id="801-jH-ORm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7O-0O-v5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2988.5496183206105" y="4204.929577464789"/>
+        </scene>
+        <!--인기도시-->
+        <scene sceneID="kEu-OJ-bey">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aFZ-gE-Jfq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="인기도시" image="magazine" catalog="system" id="uiN-Qa-K9S"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uV-iP-lJK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vhh-li-7vt" kind="relationship" relationship="rootViewController" id="dXQ-s8-Yfv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qk-Ms-lKZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2061.8320610687024" y="4204.929577464789"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -1670,6 +1732,7 @@
         <image name="fork.knife.circle" catalog="system" width="128" height="123"/>
         <image name="image" width="147" height="229.33332824707031"/>
         <image name="link.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="magazine" catalog="system" width="110" height="128"/>
         <image name="moon.fill" catalog="system" width="128" height="123"/>
         <image name="paperplane.circle" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
