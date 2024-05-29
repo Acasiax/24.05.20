@@ -12,7 +12,7 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureView("설정 화면")
+        //configureView("설정 화면")
     }
     
     @IBAction func presentModal(_ sender: UIButton) {

@@ -20,6 +20,11 @@
 		AA05F2332C06346D00080107 /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2312C06346D00080107 /* ShoppingTableViewCell.swift */; };
 		AA05F2342C06346D00080107 /* ShoppingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F2322C06346D00080107 /* ShoppingTableViewCell.xib */; };
 		AA05F2362C0637C200080107 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2352C0637C200080107 /* ShoppingItem.swift */; };
+		AA05F23C2C06FBCC00080107 /* TavelInToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F23B2C06FBCC00080107 /* TavelInToViewController.swift */; };
+		AA05F23E2C07024E00080107 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F23D2C07024E00080107 /* CityInfo.swift */; };
+		AA05F2412C07028E00080107 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F23F2C07028D00080107 /* SettingViewController.swift */; };
+		AA05F2422C07028E00080107 /* BrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2402C07028E00080107 /* BrownViewController.swift */; };
+		AA05F2442C07068A00080107 /* ADINTOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2432C07068A00080107 /* ADINTOViewController.swift */; };
 		AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */; };
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
@@ -51,6 +56,11 @@
 		AA05F2312C06346D00080107 /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 		AA05F2322C06346D00080107 /* ShoppingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingTableViewCell.xib; sourceTree = "<group>"; };
 		AA05F2352C0637C200080107 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		AA05F23B2C06FBCC00080107 /* TavelInToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TavelInToViewController.swift; sourceTree = "<group>"; };
+		AA05F23D2C07024E00080107 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		AA05F23F2C07028D00080107 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		AA05F2402C07028E00080107 /* BrownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrownViewController.swift; sourceTree = "<group>"; };
+		AA05F2432C07068A00080107 /* ADINTOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADINTOViewController.swift; sourceTree = "<group>"; };
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
@@ -105,6 +115,9 @@
 		AA05F1EB2C04C79A00080107 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AA05F2402C07028E00080107 /* BrownViewController.swift */,
+				AA05F23F2C07028D00080107 /* SettingViewController.swift */,
+				AA05F23D2C07024E00080107 /* CityInfo.swift */,
 				AA05F1E12C04B1C800080107 /* TravelModel.swift */,
 				AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */,
 			);
@@ -142,6 +155,8 @@
 				AA05F1EB2C04C79A00080107 /* Model */,
 				AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */,
 				AA05F1E52C04B6D800080107 /* PopularCitiesViewController.swift */,
+				AA05F23B2C06FBCC00080107 /* TavelInToViewController.swift */,
+				AA05F2432C07068A00080107 /* ADINTOViewController.swift */,
 			);
 			name = "여행";
 			path = "여행";
@@ -288,10 +303,15 @@
 				AA05F1E22C04B1C800080107 /* TravelModel.swift in Sources */,
 				AA05F1E92C04BA6000080107 /* CitiyTableViewCell.swift in Sources */,
 				AA05F1E62C04B6D800080107 /* PopularCitiesViewController.swift in Sources */,
+				AA05F23E2C07024E00080107 /* CityInfo.swift in Sources */,
 				AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */,
 				AAFFFCA02BFF792700B8B428 /* SetUpTableViewController.swift in Sources */,
+				AA05F23C2C06FBCC00080107 /* TavelInToViewController.swift in Sources */,
+				AA05F2412C07028E00080107 /* SettingViewController.swift in Sources */,
+				AA05F2422C07028E00080107 /* BrownViewController.swift in Sources */,
 				AAFFFB832BF87B4C00B8B428 /* EmotionsViewController.swift in Sources */,
 				AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */,
+				AA05F2442C07068A00080107 /* ADINTOViewController.swift in Sources */,
 				AAFFFB672BF71E4200B8B428 /* AppDelegate.swift in Sources */,
 				AAFFFB692BF71E4200B8B428 /* SceneDelegate.swift in Sources */,
 			);

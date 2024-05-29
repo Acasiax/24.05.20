@@ -48,7 +48,7 @@ class shoppingListViewController: UIViewController {
             cell.checkBox1.tag = indexPath.row
             cell.checkBox1.addTarget(self, action: #selector(toggleCompletion(_:)), for: .touchUpInside)
            
-            // 즐겨찾기 버튼임
+            // 즐겨찾기 버튼
             cell.starButton1.tag = indexPath.row
             cell.starButton1.addTarget(self, action: #selector(toggleLikeStar(_:)), for: .touchUpInside)
            

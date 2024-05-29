@@ -42,7 +42,7 @@ extension PopularCitiesViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //광고 셀 생성
         if isAdCell(at: indexPath) {
-            //수업 떄 배운 단락평가 활용
+            //단락평가 활용
             guard let cell = PopularCitiesTableView.dequeueReusableCell(withIdentifier: ADTableViewCell.indentifier2, for: indexPath) as? ADTableViewCell else {
                 return UITableViewCell()
             }
@@ -71,6 +71,31 @@ extension PopularCitiesViewController: UITableViewDelegate, UITableViewDataSourc
     //        return UITableView.automaticDimension
     //    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 선택된 행의 데이터 출력
+        // 선택된 셀의 데이터 가져오기
+                guard let cell = tableView.cellForRow(at: indexPath) as? CitiyTableViewCell else {
+                    return
+                }
+        
+        // 스토리보드 인스턴스 생성
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+    
+        
+        // 스토리보드에서 특정 뷰 컨트롤러를 인스턴스화
+        if let newvc = storyboard.instantiateViewController(withIdentifier: "TavelInTo") as? TavelInToViewController {
+            // 새 뷰 컨트롤러의 내비게이션 아이템 제목을 설정
+            newvc.navigationItem.title = cell.subTitleLB.text
+            
+            // 내비게이션 컨트롤러를 통해 새 뷰 컨트롤러로 푸시
+            if let navigationController = navigationController {
+                navigationController.pushViewController(newvc, animated: true)
+            } else {
+                print("안됩니다")
+            }
+        }
+    }
     
     
 }
