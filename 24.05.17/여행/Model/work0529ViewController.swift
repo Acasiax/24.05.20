@@ -10,17 +10,16 @@ import UIKit
 class work0529ViewController: UIViewController {
 
     @IBOutlet var UserSearchBar: UISearchBar!
-    
     @IBOutlet var Userseg: UISegmentedControl!
-    
     @IBOutlet var worktableview: UITableView!
     
     
-    let CityCollectList = CityInfo.city
+    var CityCollectList = CityInfo.city
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupSegmentedControl()
     }
 
   
@@ -52,7 +51,57 @@ extension work0529ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension work0529ViewController: UISearchBarDelegate {
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            filterContentForSearchText(searchText)
+        }
+
+        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+           
+        }
+        
+        func filterContentForSearchText(_ searchText: String) {
+            worktableview.reloadData()
+        }
     
     
+}
+
+
+extension work0529ViewController {
+    func setupSegmentedControl() {
+        
+        Userseg.removeAllSegments()
+        Userseg.insertSegment(withTitle: "모두", at: 0, animated: false)
+        Userseg.insertSegment(withTitle: "국내", at: 1, animated: false)
+        Userseg.insertSegment(withTitle: "해외", at: 2, animated: false)
+        
+        
+        Userseg.selectedSegmentIndex = 0
+        
+        
+        Userseg.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
+    }
+    
+    @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        
+        print("세그먼트 인덱스 확인 🥕: \(sender.selectedSegmentIndex)")
+       
+        filterContentForSegmentIndex(sender.selectedSegmentIndex)
+    }
+
+    
+    //이런건 스위치가 젤 편함
+    func filterContentForSegmentIndex(_ index: Int) {
+           switch index {
+           case 1:
+               CityCollectList = CityInfo.filterCities(isDomestic: true)
+           case 2:
+               CityCollectList = CityInfo.filterCities(isDomestic: false)
+           default:
+               CityCollectList = CityInfo.city
+           }
+           filterContentForSearchText(UserSearchBar.text ?? "")
+        worktableview.reloadData()
+       }
     
 }

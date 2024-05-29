@@ -14,9 +14,9 @@ struct City {
     let domestic_travel: Bool
     
     var cityName: String {
-        return "\(city_name) | \(city_english_name)"
-    }
-    
+           return "\(city_name), \(city_english_name)"
+       }
+
 }
 
 
@@ -38,4 +38,8 @@ struct CityInfo {
         City(city_name: "토론토", city_english_name: "Toronto", city_explain: "토론토, 나이아가라, 킹스턴, 블루마운틴", city_image: "https://images.unsplash.com/photo-1715645943531-a57960d41818?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", domestic_travel: false),
         City(city_name: "대전", city_english_name: "Daejeon", city_explain: "대전, 성심당", city_image: "https://plus.unsplash.com/premium_photo-1695084221958-079096c96e05?q=80&w=3461&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", domestic_travel: true),
     ]
+    
+    static func filterCities(isDomestic: Bool) -> [City] {
+            return city.filter { $0.domestic_travel == isDomestic }
+        }
 }
