@@ -15,11 +15,14 @@ class work0529ViewController: UIViewController {
     
     
     var CityCollectList = CityInfo.city
+    //검색결과 거른거
+    var filteredCityList = CityInfo.city
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         setupSegmentedControl()
+        UserSearchBar.delegate = self
     }
 
   
@@ -37,7 +40,8 @@ extension work0529ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CityCollectList.count
+       // return CityCollectList.count
+        return filteredCityList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,15 +56,18 @@ extension work0529ViewController: UITableViewDelegate, UITableViewDataSource {
 extension work0529ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(#function)
             filterContentForSearchText(searchText)
         }
 
         func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-           
+            searchBar.text = ""
+            filterContentForSearchText("")
         }
         
         func filterContentForSearchText(_ searchText: String) {
             worktableview.reloadData()
+            
         }
     
     
