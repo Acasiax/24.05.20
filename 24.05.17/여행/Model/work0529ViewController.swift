@@ -9,6 +9,10 @@ import UIKit
 
 class work0529ViewController: UIViewController {
 
+    @IBOutlet var UserSearchBar: UISearchBar!
+    
+    @IBOutlet var Userseg: UISegmentedControl!
+    
     @IBOutlet var worktableview: UITableView!
     
     
@@ -44,3 +48,11 @@ extension work0529ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+
+
+extension work0529ViewController: UISearchBarDelegate {
+    
+    
+    
+    
+}

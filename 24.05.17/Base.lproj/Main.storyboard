@@ -1666,25 +1666,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-Ej-3cy">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vhh-li-7vt" id="CW4-MT-lKN"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="isE-fn-e8z">
+                                <rect key="frame" x="0.0" y="192" width="393" height="577"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ncX-mo-kPp">
-                                <rect key="frame" x="16" y="132" width="361" height="32"/>
+                                <rect key="frame" x="16" y="159" width="361" height="32"/>
                                 <segments>
                                     <segment title="1"/>
                                     <segment title="2"/>
                                     <segment title="3"/>
                                 </segments>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="isE-fn-e8z">
-                                <rect key="frame" x="0.0" y="187" width="393" height="582"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Y6-uE-ixg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="z4A-Ej-3cy" firstAttribute="trailing" secondItem="9Y6-uE-ixg" secondAttribute="trailing" id="4cs-5t-Rge"/>
+                            <constraint firstItem="z4A-Ej-3cy" firstAttribute="top" secondItem="9Y6-uE-ixg" secondAttribute="top" id="7rP-F0-bDt"/>
+                            <constraint firstItem="isE-fn-e8z" firstAttribute="top" secondItem="ncX-mo-kPp" secondAttribute="bottom" constant="2" id="Cmf-fw-bpE"/>
+                            <constraint firstItem="ncX-mo-kPp" firstAttribute="centerX" secondItem="bqX-kA-ulN" secondAttribute="centerX" id="FsQ-AN-QKF"/>
                             <constraint firstItem="9Y6-uE-ixg" firstAttribute="trailing" secondItem="isE-fn-e8z" secondAttribute="trailing" id="Q6e-nD-sKq"/>
-                            <constraint firstItem="isE-fn-e8z" firstAttribute="top" secondItem="ncX-mo-kPp" secondAttribute="bottom" constant="24" id="V5B-DX-PKe"/>
-                            <constraint firstItem="ncX-mo-kPp" firstAttribute="top" secondItem="9Y6-uE-ixg" secondAttribute="top" constant="29" id="Y3x-dw-vvn"/>
+                            <constraint firstItem="z4A-Ej-3cy" firstAttribute="leading" secondItem="9Y6-uE-ixg" secondAttribute="leading" id="bds-es-B1Z"/>
+                            <constraint firstItem="ncX-mo-kPp" firstAttribute="top" secondItem="z4A-Ej-3cy" secondAttribute="bottom" id="eLp-ei-vxw"/>
                             <constraint firstItem="9Y6-uE-ixg" firstAttribute="bottom" secondItem="isE-fn-e8z" secondAttribute="bottom" id="fqB-Rf-ez6"/>
                             <constraint firstItem="ncX-mo-kPp" firstAttribute="leading" secondItem="9Y6-uE-ixg" secondAttribute="leading" constant="16" id="nD1-Vy-umH"/>
                             <constraint firstItem="isE-fn-e8z" firstAttribute="leading" secondItem="9Y6-uE-ixg" secondAttribute="leading" id="nQd-d5-ymX"/>
@@ -1693,6 +1704,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="rTm-ys-gdh"/>
                     <connections>
+                        <outlet property="UserSearchBar" destination="z4A-Ej-3cy" id="a7y-JU-Sia"/>
+                        <outlet property="Userseg" destination="ncX-mo-kPp" id="4OS-km-rDt"/>
                         <outlet property="worktableview" destination="isE-fn-e8z" id="801-jH-ORm"/>
                     </connections>
                 </viewController>
