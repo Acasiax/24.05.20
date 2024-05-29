@@ -26,6 +26,7 @@ class PopularCitiesViewController: UIViewController {
         let adNib = UINib(nibName: ADTableViewCell.indentifier2, bundle: nil)
         PopularCitiesTableView.register(adNib, forCellReuseIdentifier: ADTableViewCell.indentifier2)
         
+        
     }
     
     //인덱스 1부터 계산하기 4번째에 넣어주자
@@ -72,30 +73,39 @@ extension PopularCitiesViewController: UITableViewDelegate, UITableViewDataSourc
     //    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 선택된 행의 데이터 출력
-        // 선택된 셀의 데이터 가져오기
+            // 스토리보드 인스턴스 생성
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            if isAdCell(at: indexPath) {
+                // 광고 셀을 눌렀을 때
+                print("광고 셀 선택")
+                guard tableView.cellForRow(at: indexPath) is ADTableViewCell else {
+                    return
+                }
+                
+                if let advc = storyboard.instantiateViewController(withIdentifier: "ADINTO") as? ADINTOViewController {
+                    advc.navigationItem.title = "광고 제목"
+                    
+                    let navigationController = UINavigationController(rootViewController: advc)
+                    navigationController.modalPresentationStyle = .fullScreen
+                    present(navigationController, animated: true, completion: nil)
+                }
+            } else {
+                // 일반 셀을 눌렀을 때
+                print("일반 셀 선택")
                 guard let cell = tableView.cellForRow(at: indexPath) as? CitiyTableViewCell else {
                     return
                 }
-        
-        // 스토리보드 인스턴스 생성
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-    
-        
-        // 스토리보드에서 특정 뷰 컨트롤러를 인스턴스화
-        if let newvc = storyboard.instantiateViewController(withIdentifier: "TavelInTo") as? TavelInToViewController {
-            // 새 뷰 컨트롤러의 내비게이션 아이템 제목을 설정
-            newvc.navigationItem.title = cell.subTitleLB.text
-            
-            // 내비게이션 컨트롤러를 통해 새 뷰 컨트롤러로 푸시
-            if let navigationController = navigationController {
-                navigationController.pushViewController(newvc, animated: true)
-            } else {
-                print("안됩니다")
+                
+                if let newvc = storyboard.instantiateViewController(withIdentifier: "TavelInTo") as? TavelInToViewController {
+                    newvc.navigationItem.title = cell.subTitleLB.text
+                    
+                    if let navigationController = navigationController {
+                        navigationController.pushViewController(newvc, animated: true)
+                    } else {
+                        print("내비게이션 컨트롤러 없음")
+                    }
+                }
             }
         }
     }
-    
-    
-}
