@@ -14,7 +14,7 @@ class ADINTOViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 뒤로 가기 버튼 설정
-                let backButton = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: #selector(backButtonTapped))
+        let backButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(backButtonTapped))
                 navigationItem.leftBarButtonItem = backButton
     
     }

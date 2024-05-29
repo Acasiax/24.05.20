@@ -28,24 +28,27 @@ class work0529TableViewCell: UITableViewCell {
            }
 
     func cellLayoutconfigure() {
-           cityLabel.textColor = .white
-           cityLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-           cityLabel.textAlignment = .right
-
-           citysubLB.textColor = .white
-           citysubLB.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-           citysubLB.textAlignment = .left
-           
-           cityBlackView.backgroundColor = .black.withAlphaComponent(0.6)
-           cityBlackView.layer.maskedCorners = [.layerMaxXMaxYCorner]
-           cityBlackView.layer.masksToBounds = true
-           cityBlackView.layer.cornerRadius = 20
-           
-           cityImageView.contentMode = .scaleAspectFill
-           cityImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
-           cityImageView.layer.masksToBounds = true
-           cityImageView.layer.cornerRadius = 20
-       }
+        
+        cityImageView.contentMode = .scaleAspectFill
+        cityImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
+        cityImageView.layer.masksToBounds = true
+        cityImageView.layer.cornerRadius = 20
+        
+        cityLabel.textColor = .white
+        cityLabel.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
+        cityLabel.textAlignment = .right
+        
+        citysubLB.textColor = .white
+        citysubLB.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        citysubLB.textAlignment = .left
+        
+        cityBlackView.backgroundColor = .black.withAlphaComponent(0.6)
+        cityBlackView.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        cityBlackView.layer.masksToBounds = true
+        cityBlackView.layer.cornerRadius = 20
+        
+        
+    }
        
        func SettingconfigureCell(_ data: City) {
            cityLabel.text = data.cityName

@@ -35,7 +35,6 @@ extension work0529ViewController: UITableViewDelegate, UITableViewDataSource {
         worktableview.dataSource = self
         let popularCityXib = UINib(nibName: "work0529TableViewCell", bundle: nil)
         worktableview.register(popularCityXib, forCellReuseIdentifier: work0529TableViewCell.indentifier)
-        //worktableview.separatorStyle = .none
         worktableview.rowHeight = 180
     }
     
@@ -65,12 +64,18 @@ extension work0529ViewController: UISearchBarDelegate {
             filterContentForSearchText("")
         }
         
-        func filterContentForSearchText(_ searchText: String) {
-            worktableview.reloadData()
-            
-        }
+    func filterContentForSearchText(_ searchText: String) {
+           if searchText.isEmpty {
+               filteredCityList = CityCollectList
+           } else {
+               filteredCityList = CityCollectList.filter { city in
+                   city.city_name.contains(searchText) || city.city_english_name.contains(searchText) || city.city_explain.contains(searchText)
+               }
+           }
+           worktableview.reloadData()
+       }
     
-    
+   
 }
 
 
@@ -84,8 +89,7 @@ extension work0529ViewController {
         
         
         Userseg.selectedSegmentIndex = 0
-        
-        
+
         Userseg.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
     }
     

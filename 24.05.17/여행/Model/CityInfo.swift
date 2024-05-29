@@ -14,9 +14,8 @@ struct City {
     let domestic_travel: Bool
     
     var cityName: String {
-           return "\(city_name), \(city_english_name)"
+           return "\(city_name) | \(city_english_name)"
        }
-
 }
 
 

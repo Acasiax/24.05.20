@@ -121,14 +121,9 @@
 		AA05F1EB2C04C79A00080107 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AA05F2402C07028E00080107 /* BrownViewController.swift */,
-				AA05F23F2C07028D00080107 /* SettingViewController.swift */,
 				AA05F23D2C07024E00080107 /* CityInfo.swift */,
 				AA05F1E12C04B1C800080107 /* TravelModel.swift */,
 				AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */,
-				AA05F2472C07191000080107 /* work0529ViewController.swift */,
-				AA05F2492C072F9800080107 /* work0529TableViewCell.swift */,
-				AA05F24A2C072F9800080107 /* work0529TableViewCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +136,8 @@
 				AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */,
 				AA05F1ED2C04C80300080107 /* ADTableViewCell.swift */,
 				AA05F1EE2C04C80300080107 /* ADTableViewCell.xib */,
+				AA05F2492C072F9800080107 /* work0529TableViewCell.swift */,
+				AA05F24A2C072F9800080107 /* work0529TableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -157,15 +154,26 @@
 			path = "쇼핑";
 			sourceTree = "<group>";
 		};
-		AA0674632C02F9B100DE8E58 /* 여행 */ = {
+		AA05F24D2C076A1600080107 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AA05F1EC2C04C7BE00080107 /* Cell */,
-				AA05F1EB2C04C79A00080107 /* Model */,
+				AA05F2472C07191000080107 /* work0529ViewController.swift */,
 				AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */,
 				AA05F1E52C04B6D800080107 /* PopularCitiesViewController.swift */,
 				AA05F23B2C06FBCC00080107 /* TavelInToViewController.swift */,
 				AA05F2432C07068A00080107 /* ADINTOViewController.swift */,
+				AA05F2402C07028E00080107 /* BrownViewController.swift */,
+				AA05F23F2C07028D00080107 /* SettingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA0674632C02F9B100DE8E58 /* 여행 */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F24D2C076A1600080107 /* View */,
+				AA05F1EC2C04C7BE00080107 /* Cell */,
+				AA05F1EB2C04C79A00080107 /* Model */,
 			);
 			name = "여행";
 			path = "여행";

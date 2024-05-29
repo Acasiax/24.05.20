@@ -735,7 +735,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-8T-zFZ">
-                                        <rect key="frame" x="16" y="16" width="43.333333333333329" height="39.333333333333336"/>
+                                        <rect key="frame" x="16.000000000000004" y="16" width="43.333333333333343" height="39.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-9f-uSu">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="20.333333333333332"/>
@@ -1571,11 +1571,11 @@
             </objects>
             <point key="canvasLocation" x="2009.9236641221373" y="2622.535211267606"/>
         </scene>
-        <!--빈공간-->
+        <!--관광-->
         <scene sceneID="kdQ-3J-RsZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YIy-Ws-6Uu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="빈공간" image="paperplane.circle" catalog="system" id="JOS-kz-KhY"/>
+                    <tabBarItem key="tabBarItem" title="관광" image="paperplane.circle" catalog="system" id="JOS-kz-KhY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wfj-pd-26B">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -1658,7 +1658,7 @@
             </objects>
             <point key="canvasLocation" x="964" y="5013"/>
         </scene>
-        <!--Work0529 View Controller-->
+        <!--인기 도시-->
         <scene sceneID="P2r-qQ-UIx">
             <objects>
                 <viewController storyboardIdentifier="PopularCityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vhh-li-7vt" customClass="work0529ViewController" customModule="_4_05_17" customModuleProvider="target" sceneMemberID="viewController">
@@ -1702,7 +1702,7 @@
                             <constraint firstItem="9Y6-uE-ixg" firstAttribute="trailing" secondItem="ncX-mo-kPp" secondAttribute="trailing" constant="16" id="tjw-mp-p3d"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rTm-ys-gdh"/>
+                    <navigationItem key="navigationItem" title="인기 도시" id="rTm-ys-gdh"/>
                     <connections>
                         <outlet property="UserSearchBar" destination="z4A-Ej-3cy" id="a7y-JU-Sia"/>
                         <outlet property="Userseg" destination="ncX-mo-kPp" id="4OS-km-rDt"/>
