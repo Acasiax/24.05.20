@@ -65,15 +65,19 @@ extension work0529ViewController: UISearchBarDelegate {
         }
         
     func filterContentForSearchText(_ searchText: String) {
-           if searchText.isEmpty {
-               filteredCityList = CityCollectList
-           } else {
-               filteredCityList = CityCollectList.filter { city in
-                   city.city_name.contains(searchText) || city.city_english_name.contains(searchText) || city.city_explain.contains(searchText)
+        if searchText.isEmpty {
+                   filteredCityList = CityCollectList
+               } else {
+                   //(옵션) 대소문자
+                   let lowercasedSearchText = searchText.lowercased()
+                   filteredCityList = CityCollectList.filter { city in
+                       city.city_name.lowercased().contains(lowercasedSearchText) ||
+                       city.city_english_name.lowercased().contains(lowercasedSearchText) ||
+                       city.city_explain.lowercased().contains(lowercasedSearchText)
+                   }
                }
+               worktableview.reloadData()
            }
-           worktableview.reloadData()
-       }
     
    
 }
