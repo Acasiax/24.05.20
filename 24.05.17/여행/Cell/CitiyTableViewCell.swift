@@ -27,10 +27,14 @@ class CitiyTableViewCell: UITableViewCell {
     
     
     static let indentifier1 = "CitiyTableViewCell"
-    static func nib() -> UINib{
-        return UINib(nibName: indentifier1, bundle: nil)
-    }
     
+//    static func nib() -> UINib{
+//        return UINib(nibName: indentifier1, bundle: nil)
+//    }
+    // 연산프로퍼티로 재정의
+    static var nib: UINib {
+            return UINib(nibName: indentifier1, bundle: nil)
+        }
     
     override func awakeFromNib() {
         super.awakeFromNib()
