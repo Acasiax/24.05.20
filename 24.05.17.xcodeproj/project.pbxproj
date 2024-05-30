@@ -22,8 +22,6 @@
 		AA05F2362C0637C200080107 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2352C0637C200080107 /* ShoppingItem.swift */; };
 		AA05F23C2C06FBCC00080107 /* TavelInToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F23B2C06FBCC00080107 /* TavelInToViewController.swift */; };
 		AA05F23E2C07024E00080107 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F23D2C07024E00080107 /* CityInfo.swift */; };
-		AA05F2412C07028E00080107 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F23F2C07028D00080107 /* SettingViewController.swift */; };
-		AA05F2422C07028E00080107 /* BrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2402C07028E00080107 /* BrownViewController.swift */; };
 		AA05F2442C07068A00080107 /* ADINTOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2432C07068A00080107 /* ADINTOViewController.swift */; };
 		AA05F2482C07191000080107 /* work0529ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2472C07191000080107 /* work0529ViewController.swift */; };
 		AA05F24B2C072F9800080107 /* work0529TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2492C072F9800080107 /* work0529TableViewCell.swift */; };
@@ -61,8 +59,6 @@
 		AA05F2352C0637C200080107 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		AA05F23B2C06FBCC00080107 /* TavelInToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TavelInToViewController.swift; sourceTree = "<group>"; };
 		AA05F23D2C07024E00080107 /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
-		AA05F23F2C07028D00080107 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		AA05F2402C07028E00080107 /* BrownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrownViewController.swift; sourceTree = "<group>"; };
 		AA05F2432C07068A00080107 /* ADINTOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADINTOViewController.swift; sourceTree = "<group>"; };
 		AA05F2472C07191000080107 /* work0529ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = work0529ViewController.swift; sourceTree = "<group>"; };
 		AA05F2492C072F9800080107 /* work0529TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = work0529TableViewCell.swift; sourceTree = "<group>"; };
@@ -162,8 +158,6 @@
 				AA05F1E52C04B6D800080107 /* PopularCitiesViewController.swift */,
 				AA05F23B2C06FBCC00080107 /* TavelInToViewController.swift */,
 				AA05F2432C07068A00080107 /* ADINTOViewController.swift */,
-				AA05F2402C07028E00080107 /* BrownViewController.swift */,
-				AA05F23F2C07028D00080107 /* SettingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,8 +321,6 @@
 				AAFFFCA02BFF792700B8B428 /* SetUpTableViewController.swift in Sources */,
 				AA05F24B2C072F9800080107 /* work0529TableViewCell.swift in Sources */,
 				AA05F23C2C06FBCC00080107 /* TavelInToViewController.swift in Sources */,
-				AA05F2412C07028E00080107 /* SettingViewController.swift in Sources */,
-				AA05F2422C07028E00080107 /* BrownViewController.swift in Sources */,
 				AAFFFB832BF87B4C00B8B428 /* EmotionsViewController.swift in Sources */,
 				AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */,
 				AA05F2442C07068A00080107 /* ADINTOViewController.swift in Sources */,
