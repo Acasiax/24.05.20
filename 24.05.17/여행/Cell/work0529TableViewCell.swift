@@ -27,28 +27,6 @@ class work0529TableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func cellLayoutconfigure() {
-        
-        cityImageView.contentMode = .scaleAspectFill
-        cityImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
-        cityImageView.layer.masksToBounds = true
-        cityImageView.layer.cornerRadius = 20
-        
-        cityLabel.textColor = .white
-        cityLabel.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
-        cityLabel.textAlignment = .right
-        
-        citysubLB.textColor = .white
-        citysubLB.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        citysubLB.textAlignment = .left
-        
-        cityBlackView.backgroundColor = .black.withAlphaComponent(0.6)
-        cityBlackView.layer.maskedCorners = [.layerMaxXMaxYCorner]
-        cityBlackView.layer.masksToBounds = true
-        cityBlackView.layer.cornerRadius = 20
-        
-        
-    }
     
     func SettingconfigureCell(_ data: City, searchText: String) {
         cityLabel.attributedText = highlightSearchText(in: data.cityName, searchText: searchText)
@@ -86,5 +64,31 @@ extension String {
             start = range.upperBound
         }
         return ranges
+    }
+}
+
+
+extension work0529TableViewCell {
+    func cellLayoutconfigure() {
+        
+        cityImageView.contentMode = .scaleAspectFill
+        cityImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
+        cityImageView.layer.masksToBounds = true
+        cityImageView.layer.cornerRadius = 20
+        
+        cityLabel.textColor = .white
+        cityLabel.font = UIFont.systemFont(ofSize: 25, weight: .heavy)
+        cityLabel.textAlignment = .right
+        
+        citysubLB.textColor = .white
+        citysubLB.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        citysubLB.textAlignment = .left
+        
+        cityBlackView.backgroundColor = .black.withAlphaComponent(0.6)
+        cityBlackView.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        cityBlackView.layer.masksToBounds = true
+        cityBlackView.layer.cornerRadius = 20
+        
+        
     }
 }
