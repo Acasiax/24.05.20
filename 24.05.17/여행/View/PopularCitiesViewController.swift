@@ -12,6 +12,7 @@ class PopularCitiesViewController: UIViewController {
     
     @IBOutlet var PopularCitiesTableView: UITableView!
     
+    //Pass Data 1: 데이터를 받을 공간(프로퍼티) 생성
     var cityList = TravelInfo().travel
     
     override func viewDidLoad() {
@@ -98,14 +99,33 @@ extension PopularCitiesViewController: UITableViewDelegate, UITableViewDataSourc
                 }
                 
                 if let newvc = storyboard.instantiateViewController(withIdentifier: "TavelInTo") as? TavelInToViewController {
+                    // Pass Data 2: vc가 가지고 있는 프로퍼티에 데이터 추가/변경
                     newvc.navigationItem.title = cell.subTitleLB.text
+                    newvc.cityDetail = cell.subTitleLB.text
                     
                     if let navigationController = navigationController {
+                       
                         navigationController.pushViewController(newvc, animated: true)
                     } else {
                         print("내비게이션 컨트롤러 없음")
                     }
                 }
             }
+        
         }
     }
+
+
+//🌟 과제 전 데이터 전달 개념 정리
+//데이터 전달 정리
+//데이터 전달은 일반적으로 두 개의 뷰 컨트롤러 간에 데이터를 주고받을 때 사용됩니다. 여기서는 `HomeViewController`에서 `DetailViewController`로 데이터를 전달하는 예를 들어 설명하겠습니다.
+// 1. 데이터를 받을 공간(프로퍼티) 생성
+//`DetailViewController`에서 데이터를 받을 프로퍼티를 생성합니다.
+// 2. vc가 가지고 있는 프로퍼티에 데이터 추가/변경
+//`HomeViewController`에서 셀을 선택할 때 `DetailViewController`의 프로퍼티에 데이터를 전달합니다.
+//3. 전달 받은 값을 뷰에다가 표현
+//`DetailViewController`의 `viewDidLoad` 메서드에서 전달 받은 데이터를 사용하여 뷰를 업데이트합니다. `viewDidLoad`는 뷰가 메모리에 로드된 후 호출되므로, 여기서 UI 요소에 데이터를 설정할 수 있습니다.
+//🧯다시 정리
+//🥕1.데이터 받을 공간 생성: DetailViewController에 데이터를 받을 프로퍼티를 생성합니다.
+//🥕2. 프로퍼티에 데이터 추가/변경: `HomeViewController`에서 `DetailViewController`로 데이터 전달
+//🥕3. 전달 받은 값을 뷰에 표현: `DetailViewController`의 `viewDidLoad`에서 전달 받은 데이터를 사용하여 UI를 업데이트
