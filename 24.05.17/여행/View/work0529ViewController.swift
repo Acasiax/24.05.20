@@ -17,6 +17,7 @@ class work0529ViewController: UIViewController {
     var CityCollectList = CityInfo.city
     //검색결과 거른거
     var filteredCityList = CityInfo.city
+    var searchText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,19 +46,21 @@ extension work0529ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: work0529TableViewCell.indentifier, for: indexPath) as? work0529TableViewCell else { return UITableViewCell() }
-        cell.SettingconfigureCell(CityCollectList[indexPath.row])
-        return cell
+                let city = filteredCityList[indexPath.row]
+                cell.SettingconfigureCell(city, searchText: searchText)
+                return cell
     }
 }
 
 
 
 extension work0529ViewController: UISearchBarDelegate {
-    
+    //옵션2 whitespace 처리
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(#function)
-            filterContentForSearchText(searchText)
-        }
+        //삽질 - 중간 텍스트 공백도 제거
+           self.searchText = searchText.replacingOccurrences(of: " ", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+           filterContentForSearchText(self.searchText)
+       }
 
         func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
             searchBar.text = ""

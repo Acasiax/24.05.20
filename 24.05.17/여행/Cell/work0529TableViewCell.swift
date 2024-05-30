@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 class work0529TableViewCell: UITableViewCell {
-
+    
     static var indentifier = "work0529TableViewCell"
     
     @IBOutlet var citysubLB: UILabel!
@@ -19,14 +19,14 @@ class work0529TableViewCell: UITableViewCell {
     
     
     override func awakeFromNib() {
-           super.awakeFromNib()
+        super.awakeFromNib()
         cellLayoutconfigure()
-           }
-
-           override func setSelected(_ selected: Bool, animated: Bool) {
-               super.setSelected(selected, animated: animated)
-           }
-
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
     func cellLayoutconfigure() {
         
         cityImageView.contentMode = .scaleAspectFill
@@ -49,12 +49,42 @@ class work0529TableViewCell: UITableViewCell {
         
         
     }
-       
-       func SettingconfigureCell(_ data: City) {
-           cityLabel.text = data.cityName
-           citysubLB.text = data.city_explain
-           if let url = URL(string: data.city_image) {
-               cityImageView.kf.setImage(with: url)
+    
+    func SettingconfigureCell(_ data: City, searchText: String) {
+        cityLabel.attributedText = highlightSearchText(in: data.cityName, searchText: searchText)
+        citysubLB.attributedText = highlightSearchText(in: data.city_explain, searchText: searchText)
+        if let url = URL(string: data.city_image) {
+            cityImageView.kf.setImage(with: url)
+        }
+    }
+    
+    
+    
+    private func highlightSearchText(in text: String, searchText: String) -> NSAttributedString {
+           let attributedText = NSMutableAttributedString(string: text)
+           let lowercasedText = text.lowercased()
+           let lowercasedSearchText = searchText.lowercased()
+           
+           if let range = lowercasedText.range(of: lowercasedSearchText) {
+               let nsRange = NSRange(range, in: text)
+               attributedText.addAttribute(.foregroundColor, value: UIColor.red, range: nsRange)
            }
+           
+           return attributedText
        }
-   }
+    
+    
+    
+}
+
+extension String {
+    func ranges(of substring: String) -> [Range<String.Index>] {
+        var ranges: [Range<String.Index>] = []
+        var start = startIndex
+        while let range = range(of: substring, range: start..<endIndex) {
+            ranges.append(range)
+            start = range.upperBound
+        }
+        return ranges
+    }
+}
