@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1377,10 +1378,25 @@
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="testVC" id="5Bd-ZY-KGf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHO-f9-go3">
+                                <rect key="frame" x="0.0" y="79" width="393" height="739"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SG2-dT-EJy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SG2-dT-EJy" firstAttribute="trailing" secondItem="lHO-f9-go3" secondAttribute="trailing" id="D8d-hR-h75"/>
+                            <constraint firstItem="lHO-f9-go3" firstAttribute="leading" secondItem="SG2-dT-EJy" secondAttribute="leading" id="ENW-h8-bed"/>
+                            <constraint firstItem="lHO-f9-go3" firstAttribute="top" secondItem="SG2-dT-EJy" secondAttribute="top" constant="20" id="K2V-pU-QRZ"/>
+                            <constraint firstItem="SG2-dT-EJy" firstAttribute="bottom" secondItem="lHO-f9-go3" secondAttribute="bottom" id="xgh-VU-pKp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zqg-Xe-J88"/>
+                    <connections>
+                        <outlet property="testmap" destination="lHO-f9-go3" id="wNB-mL-wvi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DDb-fS-RXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1546,6 +1562,7 @@
                         <segue destination="hjE-ur-fuz" kind="relationship" relationship="viewControllers" id="6RX-UU-r5y"/>
                         <segue destination="YIy-Ws-6Uu" kind="relationship" relationship="viewControllers" id="gnI-Et-1eO"/>
                         <segue destination="aFZ-gE-Jfq" kind="relationship" relationship="viewControllers" id="vIR-ly-V1b"/>
+                        <segue destination="UFb-JF-z9a" kind="relationship" relationship="viewControllers" id="VeA-dX-y4z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJk-Vl-rao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1607,7 +1624,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uuu-Xn-Pym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="5013"/>
+            <point key="canvasLocation" x="2042" y="5873"/>
         </scene>
         <!--Shopping List View Controller-->
         <scene sceneID="l5s-0b-rKf">
@@ -1638,7 +1655,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScF-Oe-hm6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2836" y="5013"/>
+            <point key="canvasLocation" x="2935" y="5873"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZRU-XO-Pd4">
@@ -1656,7 +1673,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDD-Yu-Yto" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="5013"/>
+            <point key="canvasLocation" x="1062" y="5873"/>
         </scene>
         <!--인기 도시-->
         <scene sceneID="P2r-qQ-UIx">
@@ -1732,6 +1749,41 @@
             </objects>
             <point key="canvasLocation" x="2061.8320610687024" y="4204.929577464789"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zGa-nP-z9Q">
+            <objects>
+                <viewController id="hh0-ii-Nhk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CAX-QA-lZG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mwn-bH-eDd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0IZ-9x-x8b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eu7-sJ-LPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3008.3969465648852" y="4898.5915492957747"/>
+        </scene>
+        <!--지도-->
+        <scene sceneID="41H-Ax-6yJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UFb-JF-z9a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="지도" image="map" catalog="system" id="559-AC-rRT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2qe-tL-u0j">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hh0-ii-Nhk" kind="relationship" relationship="rootViewController" id="BcA-bx-ILp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHQ-37-uYO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081.679389312977" y="4898.5915492957747"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ZGI-K5-3Wg"/>
@@ -1746,6 +1798,7 @@
         <image name="image" width="147" height="229.33332824707031"/>
         <image name="link.circle.fill" catalog="system" width="128" height="123"/>
         <image name="magazine" catalog="system" width="110" height="128"/>
+        <image name="map" catalog="system" width="128" height="112"/>
         <image name="moon.fill" catalog="system" width="128" height="123"/>
         <image name="paperplane.circle" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

@@ -57,7 +57,7 @@ extension foodViewController: UITableViewDataSource, UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         // 스토리보드에서 특정 뷰 컨트롤러를 인스턴스화
-        if let newvc = storyboard.instantiateViewController(withIdentifier: "testVC") as? UIViewController {
+        if let newvc = storyboard.instantiateViewController(withIdentifier: "testVC") as? testVCViewController {
             // 새 뷰 컨트롤러의 내비게이션 아이템 제목을 설정
             newvc.navigationItem.title = filteredRestaurantList[indexPath.row].name
             
