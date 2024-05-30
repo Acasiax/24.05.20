@@ -28,6 +28,9 @@ class foodViewController: UIViewController, UISearchBarDelegate {
         foodSegWay.addTarget(self, action: #selector(segmentedControlChanged), for: .valueChanged)
         
     }
+    
+
+    
     @objc func segmentedControlChanged(_ sender: UISegmentedControl) {
            filterRestaurants()
        }

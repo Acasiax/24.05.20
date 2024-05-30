@@ -34,7 +34,40 @@ class testVCViewController: UIViewController {
                     testmap.addAnnotation(annotation)
                 }
       
+        // 네비게이션 아이템에 버튼 추가
+                let rightBarButton = UIBarButtonItem(title: "필터", style: .plain, target: self, action: #selector(showOptions))
+                navigationItem.rightBarButtonItem = rightBarButton
+        
     }
     
+    @objc func showOptions() {
+            let alertController = UIAlertController(title: "유형", message: "선택하세요🥕", preferredStyle: .actionSheet)
+            
+            let option1 = UIAlertAction(title: "메가박스", style: .default) { _ in
+                print("📍매가박스 당첨")
+            }
+            
+            let option2 = UIAlertAction(title: "롯데시네마", style: .default) { _ in
+                print("📍롯데시네마 당첨")
+            }
+            
+        let option3 = UIAlertAction(title: "CGV", style: .default) { _ in
+            print("📍CGV 당첨")
+        }
+        
+        let option4 = UIAlertAction(title: "전체보기", style: .default) { _ in
+            print("📍전체보기 당첨")
+        }
+        
+            let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+            
+            alertController.addAction(option1)
+            alertController.addAction(option2)
+        alertController.addAction(option3)
+        alertController.addAction(option4)
+            alertController.addAction(cancelAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
 
 }
