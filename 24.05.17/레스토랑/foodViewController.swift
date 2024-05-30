@@ -25,8 +25,29 @@ class foodViewController: UIViewController, UISearchBarDelegate {
         textField.placeholder = "음식점을 입력하세요"
         filteredRestaurantList = restaurantList // 초기화시 전체 리스트를 보여줌
         tableView.register(MyTableViewCell.nib(), forCellReuseIdentifier: MyTableViewCell.identifierName)
+        foodSegWay.addTarget(self, action: #selector(segmentedControlChanged), for: .valueChanged)
+        
     }
-    
+    @objc func segmentedControlChanged(_ sender: UISegmentedControl) {
+           filterRestaurants()
+       }
+    //스위치 go~
+    func filterRestaurants() {
+           switch foodSegWay.selectedSegmentIndex {
+           case 0:
+               filteredRestaurantList = restaurantList
+           case 1:
+               filteredRestaurantList = restaurantList.filter { $0.category == "한식" }
+           case 2:
+               filteredRestaurantList = restaurantList.filter { $0.category == "중식" }
+           case 3:
+               filteredRestaurantList = restaurantList.filter { $0.category == "일식" }
+           default:
+               filteredRestaurantList = restaurantList
+           }
+           tableView.reloadData()
+       }
+       
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
