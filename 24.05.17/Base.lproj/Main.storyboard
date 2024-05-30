@@ -1380,17 +1380,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHO-f9-go3">
-                                <rect key="frame" x="0.0" y="79" width="393" height="739"/>
+                                <rect key="frame" x="0.0" y="95" width="393" height="723"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SG2-dT-EJy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SG2-dT-EJy" firstAttribute="trailing" secondItem="lHO-f9-go3" secondAttribute="trailing" id="D8d-hR-h75"/>
-                            <constraint firstItem="lHO-f9-go3" firstAttribute="leading" secondItem="SG2-dT-EJy" secondAttribute="leading" id="ENW-h8-bed"/>
-                            <constraint firstItem="lHO-f9-go3" firstAttribute="top" secondItem="SG2-dT-EJy" secondAttribute="top" constant="20" id="K2V-pU-QRZ"/>
-                            <constraint firstItem="SG2-dT-EJy" firstAttribute="bottom" secondItem="lHO-f9-go3" secondAttribute="bottom" id="xgh-VU-pKp"/>
+                            <constraint firstItem="lHO-f9-go3" firstAttribute="trailing" secondItem="SG2-dT-EJy" secondAttribute="trailing" id="7o4-gu-5FB"/>
+                            <constraint firstItem="lHO-f9-go3" firstAttribute="leading" secondItem="SG2-dT-EJy" secondAttribute="leading" id="Naf-Bt-co3"/>
+                            <constraint firstItem="lHO-f9-go3" firstAttribute="bottom" secondItem="SG2-dT-EJy" secondAttribute="bottom" id="eab-sU-7Zw"/>
+                            <constraint firstItem="lHO-f9-go3" firstAttribute="top" secondItem="SG2-dT-EJy" secondAttribute="top" constant="36" id="f0Y-HT-yLz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zqg-Xe-J88"/>
@@ -1502,7 +1502,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="K9f-s6-FRc">
-                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="138" width="393" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="ccu-fu-I51"/>
                                 </constraints>
@@ -1512,7 +1512,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NPT-Vw-oOr">
-                                <rect key="frame" x="0.0" y="159" width="393" height="610"/>
+                                <rect key="frame" x="0.0" y="194" width="393" height="575"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="102" id="llr-4I-nM4">
@@ -1525,28 +1525,43 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" restorationIdentifier="foodSegWay" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eOe-eb-zde">
+                                <rect key="frame" x="10" y="103" width="373" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="nbW-QP-cJ8"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="전체"/>
+                                    <segment title="한식"/>
+                                    <segment title="중식"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uxu-nH-e5v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NPT-Vw-oOr" firstAttribute="leading" secondItem="Uxu-nH-e5v" secondAttribute="leading" id="1it-hp-gqs"/>
-                            <constraint firstItem="K9f-s6-FRc" firstAttribute="top" secondItem="Uxu-nH-e5v" secondAttribute="top" id="6Ae-1y-KC0"/>
-                            <constraint firstItem="NPT-Vw-oOr" firstAttribute="top" secondItem="K9f-s6-FRc" secondAttribute="bottom" id="73Q-0R-996"/>
                             <constraint firstItem="K9f-s6-FRc" firstAttribute="leading" secondItem="Uxu-nH-e5v" secondAttribute="leading" id="Pux-gJ-iyp"/>
+                            <constraint firstItem="NPT-Vw-oOr" firstAttribute="top" secondItem="K9f-s6-FRc" secondAttribute="bottom" id="Rj5-96-xDO"/>
                             <constraint firstItem="K9f-s6-FRc" firstAttribute="trailing" secondItem="Uxu-nH-e5v" secondAttribute="trailing" id="Tsc-Jc-H9G"/>
+                            <constraint firstItem="K9f-s6-FRc" firstAttribute="top" secondItem="eOe-eb-zde" secondAttribute="bottom" id="Yuh-Hq-I7J"/>
+                            <constraint firstItem="eOe-eb-zde" firstAttribute="leading" secondItem="Uxu-nH-e5v" secondAttribute="leading" constant="10" id="a1j-CV-g40"/>
+                            <constraint firstItem="eOe-eb-zde" firstAttribute="top" secondItem="Uxu-nH-e5v" secondAttribute="top" id="kME-gi-RhO"/>
                             <constraint firstItem="NPT-Vw-oOr" firstAttribute="bottom" secondItem="Uxu-nH-e5v" secondAttribute="bottom" id="u38-lx-bTo"/>
+                            <constraint firstItem="Uxu-nH-e5v" firstAttribute="trailing" secondItem="eOe-eb-zde" secondAttribute="trailing" constant="10" id="wh0-oL-jz9"/>
                             <constraint firstItem="NPT-Vw-oOr" firstAttribute="trailing" secondItem="Uxu-nH-e5v" secondAttribute="trailing" id="y8Q-9W-r9A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="문래동 맛집" id="QNb-t5-f3M"/>
                     <connections>
+                        <outlet property="foodSegWay" destination="eOe-eb-zde" id="8fB-mT-8OK"/>
                         <outlet property="tableView" destination="NPT-Vw-oOr" id="MBI-do-uhX"/>
                         <outlet property="textField" destination="K9f-s6-FRc" id="ZTt-pS-hVe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGG-Tt-KOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2936.6412213740455" y="2622.535211267606"/>
+            <point key="canvasLocation" x="2935.1145038167938" y="2622.535211267606"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2Hu-8f-Xef">

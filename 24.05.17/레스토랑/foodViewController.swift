@@ -9,6 +9,8 @@ import UIKit
 import Kingfisher
 
 class foodViewController: UIViewController, UISearchBarDelegate {
+    
+    @IBOutlet var foodSegWay: UISegmentedControl!
     @IBOutlet var textField: UISearchBar!
     @IBOutlet var tableView: UITableView!
     
