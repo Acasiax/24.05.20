@@ -18,9 +18,10 @@ class TavelInToViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 전달 받은 값을 뷰에 표현
+        // (data pass)전달 받은 값을 뷰에 표현
         if let detail = cityDetail {
-            
+            detailLabel.text = detail
+            detailLabel.numberOfLines = 0
         }
         
         
