@@ -27,25 +27,35 @@ class ChatListController: UIViewController {
 
     extension ChatListController: UITableViewDelegate, UITableViewDataSource {
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return mockChatList[0].chatList.count
+            return mockChatList[0].chatroomName.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatTableViewCell.indentifier, for: indexPath) as? ChatTableViewCell else {
-                return UITableViewCell()
-            }
-            
-            let chat = mockChatList[0].chatList[indexPath.row]
-            cell.configure(with: chat)
-            return cell
-        }
-        
-        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            
-            print("\(indexPath.row.description)")
-        }
-        
-    }
+               guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatTableViewCell.indentifier, for: indexPath) as? ChatTableViewCell else {
+                   return UITableViewCell()
+               }
+               
+            let chatRoom = mockChatList[indexPath.row]
+               if let lastChat = chatRoom.chatList.last {
+                   cell.configure(with: lastChat, chatRoom: chatRoom)
+               }
+               return cell
+           }
+           
+           
+           func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+               if let newvc = storyboard?.instantiateViewController(withIdentifier: ChattingViewController.identifier) as? ChattingViewController {
+                   let selectedChatRoom = mockChatList[indexPath.row]
+                   newvc.chatRoom = selectedChatRoom
+                   
+                   if let navigationController = navigationController {
+                       navigationController.pushViewController(newvc, animated: true)
+                   } else {
+                       print("네비 없다")
+                   }
+               }
+           }
+       }
 
     extension ChatListController: UISearchBarDelegate {
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

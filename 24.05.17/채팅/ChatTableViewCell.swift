@@ -9,7 +9,7 @@ import UIKit
 
 class ChatTableViewCell: UITableViewCell {
 
-    
+    @IBOutlet var chatroomName: UILabel!
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var userLB: UILabel!
     @IBOutlet var messageLB: UILabel!
@@ -26,10 +26,10 @@ class ChatTableViewCell: UITableViewCell {
             super.setSelected(selected, animated: animated)
         }
 
-        func configure(with chat: Chat) {
+        func configure(with chat: Chat, chatRoom: ChatRoom) {
             userLB.numberOfLines = 0
             messageLB.numberOfLines = 0
-            
+            chatroomName.text = chatRoom.chatroomName
             userLB.text = chat.user.rawValue
             messageLB.text = chat.message
             dateLB.text = chat.date

@@ -11,7 +11,7 @@ enum User: String {
     case jack = "Jack"
     case bran = "Bran"
     case den = "Den"
-    case user //본인
+    case user = "slime1"
     case other_friend = "내옆자리의앞자리에개발잘하는친구"
     case simsim = "심심이"
     
@@ -32,9 +32,11 @@ struct ChatRoom {
 
 //채팅 화면에서 사용할 데이터 구조체
 struct Chat {
+    //let roomName: String
     let user: User
     let date: String
     let message: String
+   
 }
 
 class mockUpchatData1 {
@@ -60,7 +62,7 @@ class mockUpchatData1 {
                 ),
         ChatRoom(chatroomId: 2,
                  chatroomImage: [User.hue.profileImage],
-                 chatroomName: User.hue.rawValue,
+                 chatroomName: "\(User.hue.rawValue)님과 개인방",
                  chatList: [
                     Chat(user: .hue,
                          date: "2024-06-11 15:30",
@@ -80,7 +82,7 @@ class mockUpchatData1 {
                  ]),
         ChatRoom(chatroomId: 3,
                  chatroomImage: [User.jack.profileImage],
-                 chatroomName: User.jack.rawValue,
+                 chatroomName: "\(User.jack.rawValue)님과 개인방",
                  chatList: [
                     Chat(user: .jack,
                          date: "2024-06-11 11:20",
@@ -106,7 +108,7 @@ class mockUpchatData1 {
                  ]),
         ChatRoom(chatroomId: 4,
                  chatroomImage: [User.bran.profileImage],
-                 chatroomName: User.bran.rawValue,
+                 chatroomName: "\(User.bran.rawValue)님과 개인방",
                  chatList: [
                     Chat(user: .bran,
                          date: "2024-06-11 21:10",
@@ -132,7 +134,7 @@ class mockUpchatData1 {
                  ]),
         ChatRoom(chatroomId: 5,
                  chatroomImage: [User.den.profileImage],
-                 chatroomName: User.den.rawValue,
+                 chatroomName: "\(User.den.rawValue)님과 개인방",
                  chatList: [
                     Chat(user: .den,
                          date: "2024-06-12 10:30",
@@ -167,7 +169,7 @@ class mockUpchatData1 {
                  ]),
         ChatRoom(chatroomId: 6,
                  chatroomImage: [User.other_friend.profileImage],
-                 chatroomName: User.other_friend.rawValue,
+                 chatroomName: "\(User.other_friend.rawValue)님과 개인방",
                  chatList: [
                     Chat(user: .user,
                          date: "2024-06-12 10:30",
@@ -188,7 +190,7 @@ class mockUpchatData1 {
                 ),
         ChatRoom(chatroomId: 7,
                  chatroomImage: [User.simsim.profileImage],
-                 chatroomName: User.simsim.rawValue,
+                 chatroomName: "\(User.simsim.rawValue)님과 개인방",
                  chatList: [
                     Chat(user: .user,
                          date: "2024-06-11 09:30",
