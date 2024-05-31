@@ -1787,7 +1787,7 @@
         <!--TRAVEL TALK-->
         <scene sceneID="zGa-nP-z9Q">
             <objects>
-                <viewController storyboardIdentifier="ChattingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hh0-ii-Nhk" customClass="ChattingViewController" customModule="_4_05_17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChattingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hh0-ii-Nhk" customClass="ChatListController" customModule="_4_05_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CAX-QA-lZG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

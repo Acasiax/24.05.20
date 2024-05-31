@@ -19,14 +19,23 @@ class ChatTableViewCell: UITableViewCell {
     static var indentifier = "ChatTableViewCell"
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-       
-    }
+            super.awakeFromNib()
+        }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        override func setSelected(_ selected: Bool, animated: Bool) {
+            super.setSelected(selected, animated: animated)
+        }
 
-        
+        func configure(with chat: Chat) {
+            userLB.numberOfLines = 0
+            messageLB.numberOfLines = 0
+            
+            userLB.text = chat.user.rawValue
+            messageLB.text = chat.message
+            dateLB.text = chat.date
+            profileImage.image = UIImage(named: chat.user.profileImage)
+            profileImage.backgroundColor = .red
+            profileImage.layer.cornerRadius = 40
+            profileImage.clipsToBounds = true
+        }
     }
-    
-}
