@@ -54,6 +54,7 @@ class ChatListController: UIViewController {
                        print("네비 없다")
                    }
                }
+               print("🥕\(mockChatList[indexPath.row].chatroomName)으로 입장")
            }
        }
 
