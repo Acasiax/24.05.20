@@ -27,6 +27,10 @@
 		AA05F24B2C072F9800080107 /* work0529TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2492C072F9800080107 /* work0529TableViewCell.swift */; };
 		AA05F24C2C072F9800080107 /* work0529TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F24A2C072F9800080107 /* work0529TableViewCell.xib */; };
 		AA05F25A2C089B0600080107 /* testVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2592C089B0600080107 /* testVCViewController.swift */; };
+		AA05F26C2C09CD3B00080107 /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F26B2C09CD3B00080107 /* ChattingData.swift */; };
+		AA05F26E2C09CDAE00080107 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F26D2C09CDAE00080107 /* ChattingViewController.swift */; };
+		AA05F2712C09CF3A00080107 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F26F2C09CF3A00080107 /* ChatTableViewCell.swift */; };
+		AA05F2722C09CF3A00080107 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F2702C09CF3A00080107 /* ChatTableViewCell.xib */; };
 		AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */; };
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
@@ -65,6 +69,10 @@
 		AA05F2492C072F9800080107 /* work0529TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = work0529TableViewCell.swift; sourceTree = "<group>"; };
 		AA05F24A2C072F9800080107 /* work0529TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = work0529TableViewCell.xib; sourceTree = "<group>"; };
 		AA05F2592C089B0600080107 /* testVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVCViewController.swift; sourceTree = "<group>"; };
+		AA05F26B2C09CD3B00080107 /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
+		AA05F26D2C09CDAE00080107 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
+		AA05F26F2C09CF3A00080107 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		AA05F2702C09CF3A00080107 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
@@ -165,6 +173,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AA05F26A2C09CD2700080107 /* 채팅 */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F26B2C09CD3B00080107 /* ChattingData.swift */,
+				AA05F26D2C09CDAE00080107 /* ChattingViewController.swift */,
+				AA05F26F2C09CF3A00080107 /* ChatTableViewCell.swift */,
+				AA05F2702C09CF3A00080107 /* ChatTableViewCell.xib */,
+			);
+			name = "채팅";
+			path = "채팅";
+			sourceTree = "<group>";
+		};
 		AA0674632C02F9B100DE8E58 /* 여행 */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +226,7 @@
 		AAFFFB652BF71E4200B8B428 /* 24.05.17 */ = {
 			isa = PBXGroup;
 			children = (
+				AA05F26A2C09CD2700080107 /* 채팅 */,
 				AA05F22E2C06331200080107 /* 쇼핑 */,
 				AA05F1CE2C03574900080107 /* 레스토랑 */,
 				AA0674632C02F9B100DE8E58 /* 여행 */,
@@ -287,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA05F1F02C04C80300080107 /* ADTableViewCell.xib in Resources */,
+				AA05F2722C09CF3A00080107 /* ChatTableViewCell.xib in Resources */,
 				AA05F24C2C072F9800080107 /* work0529TableViewCell.xib in Resources */,
 				AAFFFB732BF71E4300B8B428 /* LaunchScreen.storyboard in Resources */,
 				AA05F1CB2C03527700080107 /* MyTableViewCell.xib in Resources */,
@@ -312,11 +334,13 @@
 				AAFFFB812BF7309D00B8B428 /* ProfileViewController.swift in Sources */,
 				AA05F1EF2C04C80300080107 /* ADTableViewCell.swift in Sources */,
 				AA05F2332C06346D00080107 /* ShoppingTableViewCell.swift in Sources */,
+				AA05F26E2C09CDAE00080107 /* ChattingViewController.swift in Sources */,
 				AA05F2362C0637C200080107 /* ShoppingItem.swift in Sources */,
 				AA05F1CD2C03529F00080107 /* foodViewController.swift in Sources */,
 				AA05F1CA2C03527700080107 /* MyTableViewCell.swift in Sources */,
 				AA05F2482C07191000080107 /* work0529ViewController.swift in Sources */,
 				AA05F1E22C04B1C800080107 /* TravelModel.swift in Sources */,
+				AA05F2712C09CF3A00080107 /* ChatTableViewCell.swift in Sources */,
 				AA05F25A2C089B0600080107 /* testVCViewController.swift in Sources */,
 				AA05F1E92C04BA6000080107 /* CitiyTableViewCell.swift in Sources */,
 				AA05F1E62C04B6D800080107 /* PopularCitiesViewController.swift in Sources */,
@@ -326,6 +350,7 @@
 				AA05F24B2C072F9800080107 /* work0529TableViewCell.swift in Sources */,
 				AA05F23C2C06FBCC00080107 /* TavelInToViewController.swift in Sources */,
 				AAFFFB832BF87B4C00B8B428 /* EmotionsViewController.swift in Sources */,
+				AA05F26C2C09CD3B00080107 /* ChattingData.swift in Sources */,
 				AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */,
 				AA05F2442C07068A00080107 /* ADINTOViewController.swift in Sources */,
 				AAFFFB672BF71E4200B8B428 /* AppDelegate.swift in Sources */,

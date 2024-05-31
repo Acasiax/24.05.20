@@ -61,13 +61,13 @@ class testVCViewController: UIViewController {
         
             let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
             
-            alertController.addAction(option1)
-            alertController.addAction(option2)
+        alertController.addAction(option1)
+        alertController.addAction(option2)
         alertController.addAction(option3)
         alertController.addAction(option4)
-            alertController.addAction(cancelAction)
-            
-            present(alertController, animated: true, completion: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
         }
 
 }

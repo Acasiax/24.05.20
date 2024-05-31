@@ -736,7 +736,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-8T-zFZ">
-                                        <rect key="frame" x="16.000000000000004" y="16" width="43.333333333333343" height="39.333333333333329"/>
+                                        <rect key="frame" x="16" y="16.000000000000004" width="43.333333333333336" height="39.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-9f-uSu">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="20.333333333333332"/>
@@ -1784,27 +1784,82 @@
             </objects>
             <point key="canvasLocation" x="2061.8320610687024" y="4204.929577464789"/>
         </scene>
-        <!--View Controller-->
+        <!--TRAVEL TALK-->
         <scene sceneID="zGa-nP-z9Q">
             <objects>
-                <viewController id="hh0-ii-Nhk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChattingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hh0-ii-Nhk" customClass="ChattingViewController" customModule="_4_05_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CAX-QA-lZG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="친구 이름을 검색해보세요" translatesAutoresizingMaskIntoConstraints="NO" id="Jek-fl-nvf">
+                                <rect key="frame" x="12" y="103" width="369" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="m3a-Na-qbb"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hh0-ii-Nhk" id="z1e-Cr-sFa"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EBX-Rg-7p2">
+                                <rect key="frame" x="0.0" y="164" width="393" height="605"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="85" id="MHk-9l-PUP">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MHk-9l-PUP" id="3f6-xH-UeP">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mwn-bH-eDd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jek-fl-nvf" firstAttribute="top" secondItem="mwn-bH-eDd" secondAttribute="top" id="4n8-gH-zux"/>
+                            <constraint firstItem="EBX-Rg-7p2" firstAttribute="top" secondItem="Jek-fl-nvf" secondAttribute="bottom" constant="5" id="BHb-g1-GiF"/>
+                            <constraint firstItem="mwn-bH-eDd" firstAttribute="trailing" secondItem="Jek-fl-nvf" secondAttribute="trailing" constant="12" id="J2m-9Y-aTa"/>
+                            <constraint firstItem="mwn-bH-eDd" firstAttribute="bottom" secondItem="EBX-Rg-7p2" secondAttribute="bottom" id="Vkf-52-bFU"/>
+                            <constraint firstItem="EBX-Rg-7p2" firstAttribute="leading" secondItem="mwn-bH-eDd" secondAttribute="leading" id="ciw-5k-mQW"/>
+                            <constraint firstItem="Jek-fl-nvf" firstAttribute="leading" secondItem="mwn-bH-eDd" secondAttribute="leading" constant="12" id="lsR-d4-b5b"/>
+                            <constraint firstItem="mwn-bH-eDd" firstAttribute="trailing" secondItem="EBX-Rg-7p2" secondAttribute="trailing" id="t8i-F9-2pP"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0IZ-9x-x8b"/>
+                    <navigationItem key="navigationItem" title="TRAVEL TALK" id="0IZ-9x-x8b"/>
+                    <connections>
+                        <outlet property="chatSearchBar" destination="Jek-fl-nvf" id="Kls-v6-iWD"/>
+                        <outlet property="chattableView" destination="EBX-Rg-7p2" id="KWV-qk-Gis"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eu7-sJ-LPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3008.3969465648852" y="4898.5915492957747"/>
+            <point key="canvasLocation" x="3006.8702290076335" y="4898.5915492957747"/>
         </scene>
-        <!--지도-->
+        <!--View Controller-->
+        <scene sceneID="m2K-vm-Vpk">
+            <objects>
+                <viewController id="mp9-Yi-p3x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NBU-Q4-Owf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fI5-Qi-cdy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fob-9V-cKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3862" y="4899"/>
+        </scene>
+        <!--채팅-->
         <scene sceneID="41H-Ax-6yJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UFb-JF-z9a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="지도" image="map" catalog="system" id="559-AC-rRT"/>
+                    <tabBarItem key="tabBarItem" title="채팅" image="message.circle" catalog="system" id="559-AC-rRT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2qe-tL-u0j">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -1833,7 +1888,7 @@
         <image name="image" width="147" height="229.33332824707031"/>
         <image name="link.circle.fill" catalog="system" width="128" height="123"/>
         <image name="magazine" catalog="system" width="110" height="128"/>
-        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="message.circle" catalog="system" width="128" height="123"/>
         <image name="moon.fill" catalog="system" width="128" height="123"/>
         <image name="paperplane.circle" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
