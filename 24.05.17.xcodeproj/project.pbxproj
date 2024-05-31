@@ -31,7 +31,7 @@
 		AA05F26E2C09CDAE00080107 /* ChatListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F26D2C09CDAE00080107 /* ChatListController.swift */; };
 		AA05F2712C09CF3A00080107 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F26F2C09CF3A00080107 /* ChatTableViewCell.swift */; };
 		AA05F2722C09CF3A00080107 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F2702C09CF3A00080107 /* ChatTableViewCell.xib */; };
-		AA05F2742C09D80100080107 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2732C09D80100080107 /* ChatListViewController.swift */; };
+		AA05F2762C09F2BB00080107 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2752C09F2BB00080107 /* ChattingViewController.swift */; };
 		AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */; };
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
@@ -74,7 +74,7 @@
 		AA05F26D2C09CDAE00080107 /* ChatListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListController.swift; sourceTree = "<group>"; };
 		AA05F26F2C09CF3A00080107 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		AA05F2702C09CF3A00080107 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
-		AA05F2732C09D80100080107 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		AA05F2752C09F2BB00080107 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
@@ -178,11 +178,11 @@
 		AA05F26A2C09CD2700080107 /* 채팅 */ = {
 			isa = PBXGroup;
 			children = (
-				AA05F2732C09D80100080107 /* ChatListViewController.swift */,
 				AA05F26B2C09CD3B00080107 /* ChattingData.swift */,
 				AA05F26D2C09CDAE00080107 /* ChatListController.swift */,
 				AA05F26F2C09CF3A00080107 /* ChatTableViewCell.swift */,
 				AA05F2702C09CF3A00080107 /* ChatTableViewCell.xib */,
+				AA05F2752C09F2BB00080107 /* ChattingViewController.swift */,
 			);
 			name = "채팅";
 			path = "채팅";
@@ -335,6 +335,7 @@
 				AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */,
 				AAFFFC652BFCCEC900B8B428 /* BMIViewController.swift in Sources */,
 				AAFFFB812BF7309D00B8B428 /* ProfileViewController.swift in Sources */,
+				AA05F2762C09F2BB00080107 /* ChattingViewController.swift in Sources */,
 				AA05F1EF2C04C80300080107 /* ADTableViewCell.swift in Sources */,
 				AA05F2332C06346D00080107 /* ShoppingTableViewCell.swift in Sources */,
 				AA05F26E2C09CDAE00080107 /* ChatListController.swift in Sources */,
@@ -353,7 +354,6 @@
 				AA05F24B2C072F9800080107 /* work0529TableViewCell.swift in Sources */,
 				AA05F23C2C06FBCC00080107 /* TavelInToViewController.swift in Sources */,
 				AAFFFB832BF87B4C00B8B428 /* EmotionsViewController.swift in Sources */,
-				AA05F2742C09D80100080107 /* ChatListViewController.swift in Sources */,
 				AA05F26C2C09CD3B00080107 /* ChattingData.swift in Sources */,
 				AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */,
 				AA05F2442C07068A00080107 /* ADINTOViewController.swift in Sources */,

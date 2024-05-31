@@ -736,7 +736,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-8T-zFZ">
-                                        <rect key="frame" x="16" y="16.000000000000004" width="43.333333333333336" height="39.333333333333343"/>
+                                        <rect key="frame" x="16" y="16" width="43.333333333333329" height="39.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-9f-uSu">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="20.333333333333332"/>
@@ -1840,10 +1840,10 @@
             </objects>
             <point key="canvasLocation" x="3006.8702290076335" y="4898.5915492957747"/>
         </scene>
-        <!--View Controller-->
+        <!--Chatting View Controller-->
         <scene sceneID="m2K-vm-Vpk">
             <objects>
-                <viewController id="mp9-Yi-p3x" sceneMemberID="viewController">
+                <viewController id="mp9-Yi-p3x" customClass="ChattingViewController" customModule="_4_05_17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NBU-Q4-Owf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
