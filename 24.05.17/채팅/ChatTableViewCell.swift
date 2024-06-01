@@ -27,13 +27,22 @@ class ChatTableViewCell: UITableViewCell {
         }
 
         func configure(with chat: Chat, chatRoom: ChatRoom) {
-            userLB.numberOfLines = 0
+            
             messageLB.numberOfLines = 0
-            chatroomName.text = chatRoom.chatroomName
-            userLB.text = chat.user.rawValue
             messageLB.text = chat.message
+            
+            
+            chatroomName.text = chatRoom.chatroomName
+            
+            
+            userLB.numberOfLines = 0
+            userLB.text = chat.user.rawValue
+            
             dateLB.text = chat.date
+            
+            
             profileImage.image = UIImage(named: chat.user.profileImage)
+           // profileImage.contentMode = .scaleToFill
             profileImage.backgroundColor = .red
             profileImage.layer.cornerRadius = 40
             profileImage.clipsToBounds = true

@@ -736,7 +736,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-8T-zFZ">
-                                        <rect key="frame" x="16" y="16.000000000000004" width="43.333333333333336" height="39.333333333333343"/>
+                                        <rect key="frame" x="16" y="16" width="43.333333333333329" height="39.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-9f-uSu">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="20.333333333333332"/>
@@ -1847,9 +1847,34 @@
                     <view key="view" contentMode="scaleToFill" id="NBU-Q4-Owf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3yK-2r-0aJ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9du-vu-Awu">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9du-vu-Awu" id="iAb-b7-DFd">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fI5-Qi-cdy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3yK-2r-0aJ" firstAttribute="leading" secondItem="fI5-Qi-cdy" secondAttribute="leading" id="Val-Vh-mY4"/>
+                            <constraint firstItem="fI5-Qi-cdy" firstAttribute="bottom" secondItem="3yK-2r-0aJ" secondAttribute="bottom" id="hyZ-eP-JON"/>
+                            <constraint firstItem="3yK-2r-0aJ" firstAttribute="top" secondItem="fI5-Qi-cdy" secondAttribute="top" id="kEZ-sy-dkh"/>
+                            <constraint firstItem="fI5-Qi-cdy" firstAttribute="trailing" secondItem="3yK-2r-0aJ" secondAttribute="trailing" id="wKg-uc-GIS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chattingHomeTableView" destination="3yK-2r-0aJ" id="iof-oW-mrU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fob-9V-cKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

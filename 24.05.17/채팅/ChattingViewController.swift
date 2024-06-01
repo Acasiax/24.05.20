@@ -9,6 +9,10 @@ import UIKit
 
 class ChattingViewController: UIViewController {
 
+    
+    @IBOutlet var chattingHomeTableView: UITableView!
+    
+    
     static var identifier = "ChattingViewController"
     //데이타 패스1.
     var chatRoom: ChatRoom?

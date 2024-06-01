@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FJ-Ju-Uqw">
-                        <rect key="frame" x="370.66666666666669" y="9.9999999999999982" width="41.333333333333314" height="20.333333333333329"/>
+                        <rect key="frame" x="370.66666666666669" y="20" width="41.333333333333314" height="20.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                     <constraint firstItem="Foy-cf-WgN" firstAttribute="centerY" secondItem="FTv-jz-2Gk" secondAttribute="centerY" id="iRv-oo-xJX"/>
                     <constraint firstItem="TjI-FD-OMD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="nFp-eT-2It"/>
                     <constraint firstItem="FTv-jz-2Gk" firstAttribute="top" secondItem="TjI-FD-OMD" secondAttribute="bottom" constant="10" id="phd-xh-Hi8"/>
-                    <constraint firstItem="6FJ-Ju-Uqw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uQG-ps-oP5"/>
+                    <constraint firstItem="6FJ-Ju-Uqw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="uQG-ps-oP5"/>
                     <constraint firstAttribute="bottom" secondItem="Foy-cf-WgN" secondAttribute="bottom" constant="10" id="z6h-Ap-BwG"/>
                 </constraints>
             </tableViewCellContentView>
