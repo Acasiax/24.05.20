@@ -17,20 +17,27 @@ class UserChatTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        UISetup()
        
     }
     
-    func configure(with message: String) {
+    func configure(with message: String, date: String) {
+        
+        
+        userMessagechatLB.text = message
+        
+        
+        userMessageDateLB.text = "시간: \(date)"
+        }
+    
+    func UISetup() {
         userUIView.backgroundColor = .systemPink
         userUIView.layer.cornerRadius = 15
         userUIView.layer.masksToBounds = true
-        
-        userMessagechatLB.text = message
         userMessagechatLB.backgroundColor = .clear
         userMessagechatLB.numberOfLines = 0
         
-        userMessageDateLB.text = "시간:"
-        }
+    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
