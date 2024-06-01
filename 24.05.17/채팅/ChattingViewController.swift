@@ -33,7 +33,7 @@ class ChattingViewController: UIViewController {
         chattingHomeTableView.rowHeight = UITableView.automaticDimension
         chattingHomeTableView.estimatedRowHeight = 100
         sendButton.addTarget(self, action: #selector(sendButtonClicked), for: .touchUpInside)
-        
+        chattingHomeTableView.separatorStyle = .none
         
         messageTextField.placeholder = "메세지를 입력하세요"
     }
