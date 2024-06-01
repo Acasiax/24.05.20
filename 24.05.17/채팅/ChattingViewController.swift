@@ -29,7 +29,7 @@ class ChattingViewController: UIViewController {
         chattingHomeTableView.delegate = self
         chattingHomeTableView.dataSource = self
         chattingHomeTableView.register(UINib(nibName: "UserChatTableViewCell", bundle: nil), forCellReuseIdentifier: "UserChatTableViewCell")
-                chattingHomeTableView.register(UINib(nibName: "OtherUserMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "OtherUserMessageTableViewCell")
+        chattingHomeTableView.register(UINib(nibName: "OtherUserMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "OtherUserMessageTableViewCell")
         chattingHomeTableView.rowHeight = UITableView.automaticDimension
         chattingHomeTableView.estimatedRowHeight = 100
         sendButton.addTarget(self, action: #selector(sendButtonClicked), for: .touchUpInside)
@@ -58,11 +58,11 @@ class ChattingViewController: UIViewController {
     
        }
     
-    func getCurrentTime() -> String {
-          let dateFormatter = DateFormatter()
-          dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-          return dateFormatter.string(from: Date())
-      }
+//    func getCurrentTime() -> String {
+//          let dateFormatter = DateFormatter()
+//          dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+//          return dateFormatter.string(from: Date())
+//      }
 }
 
 extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {

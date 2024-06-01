@@ -28,7 +28,7 @@ class OtherUserMessageTableViewCell: UITableViewCell {
         usernameLB.text = user.rawValue
         otherUserMessageLB.text = message
         otherUserMessageLB.numberOfLines = 0
-        dateLB.text = date
+        dateLB.text = formatTime(dateString: date)
     }
     
     
@@ -54,7 +54,14 @@ class OtherUserMessageTableViewCell: UITableViewCell {
 
         
     }
-    
+    private func formatTime(dateString: String) -> String? {
+          let dateFormatter = DateFormatter()
+          dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+          guard let date = dateFormatter.date(from: dateString) else { return nil }
+          
+          dateFormatter.dateFormat = "HH:mm"
+          return dateFormatter.string(from: date)
+      }
 
     
 }
