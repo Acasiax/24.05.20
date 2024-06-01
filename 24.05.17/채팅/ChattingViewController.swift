@@ -33,10 +33,23 @@ class ChattingViewController: UIViewController {
         chattingHomeTableView.rowHeight = UITableView.automaticDimension
         chattingHomeTableView.estimatedRowHeight = 100
         sendButton.addTarget(self, action: #selector(sendButtonClicked), for: .touchUpInside)
+        
+        
+        messageTextField.placeholder = "메세지를 입력하세요"
     }
     @objc func sendButtonClicked() {
         print("전송 버튼 클릭")
+        if let lastIndex = chatRoom?.chatList.indices.last {
+                 let indexPath = IndexPath(row: lastIndex, section: 0)
+                 chattingHomeTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+             }
        }
+    
+    func getCurrentTime() -> String {
+          let dateFormatter = DateFormatter()
+          dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+          return dateFormatter.string(from: Date())
+      }
 }
 
 extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
