@@ -25,17 +25,17 @@ class UserChatTableViewCell: UITableViewCell {
         
         
         userMessagechatLB.text = message
-        
-        
         userMessageDateLB.text = "시간: \(date)"
         }
     
     func UISetup() {
+        
         userUIView.backgroundColor = .systemPink
         userUIView.layer.cornerRadius = 15
         userUIView.layer.masksToBounds = true
         userMessagechatLB.backgroundColor = .clear
         userMessagechatLB.numberOfLines = 0
+       // userMessagechatLB.textAlignment = .
         
     }
     

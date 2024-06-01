@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15u-7J-2P9">
-                        <rect key="frame" x="100" y="10" width="399" height="106"/>
+                        <rect key="frame" x="437.66666666666669" y="10" width="61.333333333333314" height="106"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUx-3y-GPR">
-                                <rect key="frame" x="10" y="10" width="379" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUx-3y-GPR">
+                                <rect key="frame" x="10" y="10" width="41.333333333333336" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,8 +35,8 @@
                             <constraint firstItem="uUx-3y-GPR" firstAttribute="top" secondItem="15u-7J-2P9" secondAttribute="top" constant="10" id="op3-gB-3et"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5R-ej-hCA">
-                        <rect key="frame" x="48.666666666666657" y="94" width="41.333333333333343" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5R-ej-hCA">
+                        <rect key="frame" x="386.33333333333331" y="95" width="41.333333333333314" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -44,8 +44,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="v5R-ej-hCA" secondAttribute="bottom" constant="10" id="10a-8p-mYZ"/>
+                    <constraint firstItem="v5R-ej-hCA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Dnj-Pl-WNB"/>
                     <constraint firstAttribute="bottom" secondItem="15u-7J-2P9" secondAttribute="bottom" constant="10" id="GUk-cQ-BQi"/>
-                    <constraint firstItem="15u-7J-2P9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="100" id="Y3m-33-WfZ"/>
+                    <constraint firstItem="15u-7J-2P9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="100" id="Y3m-33-WfZ"/>
                     <constraint firstItem="15u-7J-2P9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dke-L5-3fF"/>
                     <constraint firstItem="15u-7J-2P9" firstAttribute="leading" secondItem="v5R-ej-hCA" secondAttribute="trailing" constant="10" id="u5F-Wh-mTa"/>
                     <constraint firstAttribute="trailing" secondItem="15u-7J-2P9" secondAttribute="trailing" constant="10" id="y0r-48-GT4"/>

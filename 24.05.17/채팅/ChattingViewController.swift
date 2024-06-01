@@ -26,6 +26,8 @@ class ChattingViewController: UIViewController {
         chattingHomeTableView.dataSource = self
         chattingHomeTableView.register(UINib(nibName: "UserChatTableViewCell", bundle: nil), forCellReuseIdentifier: "UserChatTableViewCell")
                 chattingHomeTableView.register(UINib(nibName: "OtherUserMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "OtherUserMessageTableViewCell")
+        chattingHomeTableView.rowHeight = UITableView.automaticDimension
+        chattingHomeTableView.estimatedRowHeight = 100
     }
 
 }
@@ -41,17 +43,17 @@ extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
                    let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
             //Data Pass2. 담기
             cell.configure(with: messageData.message, date: messageData.date)
-                   return cell
-               } else {
-                   let cell = tableView.dequeueReusableCell(withIdentifier: "OtherUserMessageTableViewCell", for: indexPath) as! OtherUserMessageTableViewCell
-                   cell.configure(with: messageData.message)
-                   return cell
-               }
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OtherUserMessageTableViewCell", for: indexPath) as! OtherUserMessageTableViewCell
+            cell.configure(with: messageData.message, date: messageData.date, user: messageData.user)
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return UITableView.automaticDimension
-        }
+        return UITableView.automaticDimension
+    }
     
     
-     }
+}
