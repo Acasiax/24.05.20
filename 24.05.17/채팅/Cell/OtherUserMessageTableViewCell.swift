@@ -29,14 +29,24 @@ class OtherUserMessageTableViewCell: UITableViewCell {
         otherUserMessageLB.text = message
         otherUserMessageLB.numberOfLines = 0
         dateLB.text = date
-        }
-
+    }
+    
     
     func UISetup() {
         otheruserProfileImage.image = UIImage(systemName: "person.circle")
         otheruserProfileImage.layer.cornerRadius = otheruserProfileImage.frame.width / 2
         otheruserProfileImage.layer.masksToBounds = true
-        otherUIView.backgroundColor = .blue
+        otherUIView.backgroundColor = UIColor(red: 0.74, green: 0.88, blue: 1.00, alpha: 1.00)
+        
+        otherUIView.layer.cornerRadius = 15
+        otherUserMessageLB.backgroundColor = .clear
+        otherUserMessageLB.layer.masksToBounds = true
+        otherUserMessageLB.numberOfLines = 0
+        otherUserMessageLB.font = UIFont.systemFont(ofSize: 16)
+        
+        
+        dateLB.font = UIFont.systemFont(ofSize: 12)
+        dateLB.textColor = .gray
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

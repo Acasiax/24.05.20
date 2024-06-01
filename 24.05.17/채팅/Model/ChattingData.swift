@@ -12,7 +12,7 @@ enum User: String {
     case bran = "Bran"
     case den = "Den"
     case user = "slime1"
-    case other_friend = "내옆자리의앞자리에개발잘하는친구"
+    case other_friend = "내옆자리의 개발 잘하는 친구"
     case simsim = "심심이"
     
     var profileImage: String {

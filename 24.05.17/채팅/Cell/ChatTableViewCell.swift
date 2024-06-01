@@ -39,7 +39,8 @@ class ChatTableViewCell: UITableViewCell {
             userLB.text = chat.user.rawValue
             
             dateLB.text = chat.date
-            
+            dateLB.font = UIFont.systemFont(ofSize: 12)
+            dateLB.textColor = .gray
             
             profileImage.image = UIImage(named: chat.user.profileImage)
            // profileImage.contentMode = .scaleToFill

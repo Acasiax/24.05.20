@@ -9,6 +9,10 @@ import UIKit
 
 class ChattingViewController: UIViewController {
 
+    @IBOutlet var messageTextField: UITextField!
+    
+    @IBOutlet var sendButton: UIButton!
+    
     
     @IBOutlet var chattingHomeTableView: UITableView!
     let mockChatList = mockUpchatData1.shared.mockChatList
@@ -28,8 +32,11 @@ class ChattingViewController: UIViewController {
                 chattingHomeTableView.register(UINib(nibName: "OtherUserMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "OtherUserMessageTableViewCell")
         chattingHomeTableView.rowHeight = UITableView.automaticDimension
         chattingHomeTableView.estimatedRowHeight = 100
+        sendButton.addTarget(self, action: #selector(sendButtonClicked), for: .touchUpInside)
     }
-
+    @objc func sendButtonClicked() {
+        print("전송 버튼 클릭")
+       }
 }
 
 extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {

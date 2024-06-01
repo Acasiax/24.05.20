@@ -31,7 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjI-FD-OMD">
-                        <rect key="frame" x="15.000000000000004" y="4" width="43.333333333333343" height="15"/>
+                        <rect key="frame" x="15.000000000000004" y="4" width="43.333333333333343" height="20"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
@@ -63,7 +63,7 @@
                     <constraint firstAttribute="trailing" secondItem="6FJ-Ju-Uqw" secondAttribute="trailing" constant="8" id="ch7-Ki-raE"/>
                     <constraint firstItem="Foy-cf-WgN" firstAttribute="centerY" secondItem="FTv-jz-2Gk" secondAttribute="centerY" id="iRv-oo-xJX"/>
                     <constraint firstItem="TjI-FD-OMD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="nFp-eT-2It"/>
-                    <constraint firstItem="FTv-jz-2Gk" firstAttribute="top" secondItem="TjI-FD-OMD" secondAttribute="bottom" constant="10" id="phd-xh-Hi8"/>
+                    <constraint firstItem="FTv-jz-2Gk" firstAttribute="top" secondItem="TjI-FD-OMD" secondAttribute="bottom" constant="5" id="phd-xh-Hi8"/>
                     <constraint firstItem="6FJ-Ju-Uqw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="uQG-ps-oP5"/>
                     <constraint firstAttribute="bottom" secondItem="Foy-cf-WgN" secondAttribute="bottom" constant="10" id="z6h-Ap-BwG"/>
                 </constraints>

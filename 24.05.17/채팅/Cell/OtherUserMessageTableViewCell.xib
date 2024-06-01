@@ -65,7 +65,7 @@
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5od-iO-rwb" secondAttribute="bottom" constant="5" id="S3c-JV-nDm"/>
                     <constraint firstItem="Oat-py-F2G" firstAttribute="leading" secondItem="8qa-4B-tWs" secondAttribute="trailing" constant="5" id="wy3-Tz-Gex"/>
                     <constraint firstItem="Oat-py-F2G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="wyN-Tz-oOU"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Gw3-Pw-lZu" secondAttribute="bottom" id="zdz-kk-icq"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Gw3-Pw-lZu" secondAttribute="bottom" constant="5" id="zdz-kk-icq"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -30,13 +30,13 @@ class UserChatTableViewCell: UITableViewCell {
     
     func UISetup() {
         
-        userUIView.backgroundColor = .systemPink
+        userUIView.backgroundColor = UIColor(red: 1.00, green: 0.78, blue: 0.87, alpha: 1.00)
         userUIView.layer.cornerRadius = 15
         userUIView.layer.masksToBounds = true
         userMessagechatLB.backgroundColor = .clear
         userMessagechatLB.numberOfLines = 0
-       // userMessagechatLB.textAlignment = .
-        
+        userMessageDateLB.font = UIFont.systemFont(ofSize: 12)
+        userMessageDateLB.textColor = .gray
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
