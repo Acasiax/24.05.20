@@ -11,7 +11,7 @@ class ChattingViewController: UIViewController {
 
     
     @IBOutlet var chattingHomeTableView: UITableView!
-    
+    let mockChatList = mockUpchatData1.shared.mockChatList
     
     static var identifier = "ChattingViewController"
     //데이타 패스1.
@@ -32,10 +32,30 @@ class ChattingViewController: UIViewController {
 
 extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return 0
+        return mockChatList.count
      }
      
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let messageData = chatRoom.chatList[indexPath.row]
+        if let chatRoom.user == .user {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
+                       cell.configure(with: messageData.message)
+                       return cell
+            
+            return cell
+               }
+  
+    else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "OtherUserMessageTableViewCell", for: indexPath) as! OtherUserMessageTableViewCell
+                    cell.configure(with: messageData.chatList[0].message)
+                    return cell
+                }
+       
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return UITableView.automaticDimension
+        }
+    
+    
      }

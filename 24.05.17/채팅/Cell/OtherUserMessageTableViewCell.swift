@@ -7,7 +7,7 @@
 
 import UIKit
 
-class otherUserMessagelTableViewCell: UITableViewCell {
+class OtherUserMessageTableViewCell: UITableViewCell {
 
     
     @IBOutlet var otherUserMessageLB: UILabel!

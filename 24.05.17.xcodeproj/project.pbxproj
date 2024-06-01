@@ -34,8 +34,8 @@
 		AA05F2762C09F2BB00080107 /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2752C09F2BB00080107 /* ChattingViewController.swift */; };
 		AA05F2792C0ABA2400080107 /* UserChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2772C0ABA2400080107 /* UserChatTableViewCell.swift */; };
 		AA05F27A2C0ABA2400080107 /* UserChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F2782C0ABA2400080107 /* UserChatTableViewCell.xib */; };
-		AA05F27D2C0ABA8800080107 /* otherUserMessagelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F27B2C0ABA8800080107 /* otherUserMessagelTableViewCell.swift */; };
-		AA05F27E2C0ABA8800080107 /* otherUserMessagelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F27C2C0ABA8800080107 /* otherUserMessagelTableViewCell.xib */; };
+		AA05F27D2C0ABA8800080107 /* OtherUserMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F27B2C0ABA8800080107 /* OtherUserMessageTableViewCell.swift */; };
+		AA05F27E2C0ABA8800080107 /* OtherUserMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F27C2C0ABA8800080107 /* OtherUserMessageTableViewCell.xib */; };
 		AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */; };
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
@@ -81,8 +81,8 @@
 		AA05F2752C09F2BB00080107 /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		AA05F2772C0ABA2400080107 /* UserChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatTableViewCell.swift; sourceTree = "<group>"; };
 		AA05F2782C0ABA2400080107 /* UserChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatTableViewCell.xib; sourceTree = "<group>"; };
-		AA05F27B2C0ABA8800080107 /* otherUserMessagelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherUserMessagelTableViewCell.swift; sourceTree = "<group>"; };
-		AA05F27C2C0ABA8800080107 /* otherUserMessagelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = otherUserMessagelTableViewCell.xib; sourceTree = "<group>"; };
+		AA05F27B2C0ABA8800080107 /* OtherUserMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserMessageTableViewCell.swift; sourceTree = "<group>"; };
+		AA05F27C2C0ABA8800080107 /* OtherUserMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherUserMessageTableViewCell.xib; sourceTree = "<group>"; };
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
@@ -186,18 +186,34 @@
 		AA05F26A2C09CD2700080107 /* 채팅 */ = {
 			isa = PBXGroup;
 			children = (
-				AA05F26B2C09CD3B00080107 /* ChattingData.swift */,
-				AA05F26D2C09CDAE00080107 /* ChatListController.swift */,
-				AA05F26F2C09CF3A00080107 /* ChatTableViewCell.swift */,
-				AA05F2702C09CF3A00080107 /* ChatTableViewCell.xib */,
+				AA05F2812C0AC21000080107 /* Cell */,
+				AA05F2802C0AC1F300080107 /* Model */,
 				AA05F2752C09F2BB00080107 /* ChattingViewController.swift */,
-				AA05F2772C0ABA2400080107 /* UserChatTableViewCell.swift */,
-				AA05F2782C0ABA2400080107 /* UserChatTableViewCell.xib */,
-				AA05F27B2C0ABA8800080107 /* otherUserMessagelTableViewCell.swift */,
-				AA05F27C2C0ABA8800080107 /* otherUserMessagelTableViewCell.xib */,
+				AA05F26D2C09CDAE00080107 /* ChatListController.swift */,
 			);
 			name = "채팅";
 			path = "채팅";
+			sourceTree = "<group>";
+		};
+		AA05F2802C0AC1F300080107 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F26B2C09CD3B00080107 /* ChattingData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA05F2812C0AC21000080107 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F2772C0ABA2400080107 /* UserChatTableViewCell.swift */,
+				AA05F2782C0ABA2400080107 /* UserChatTableViewCell.xib */,
+				AA05F27B2C0ABA8800080107 /* OtherUserMessageTableViewCell.swift */,
+				AA05F27C2C0ABA8800080107 /* OtherUserMessageTableViewCell.xib */,
+				AA05F26F2C09CF3A00080107 /* ChatTableViewCell.swift */,
+				AA05F2702C09CF3A00080107 /* ChatTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		AA0674632C02F9B100DE8E58 /* 여행 */ = {
@@ -327,7 +343,7 @@
 				AA05F2722C09CF3A00080107 /* ChatTableViewCell.xib in Resources */,
 				AA05F24C2C072F9800080107 /* work0529TableViewCell.xib in Resources */,
 				AAFFFB732BF71E4300B8B428 /* LaunchScreen.storyboard in Resources */,
-				AA05F27E2C0ABA8800080107 /* otherUserMessagelTableViewCell.xib in Resources */,
+				AA05F27E2C0ABA8800080107 /* OtherUserMessageTableViewCell.xib in Resources */,
 				AA05F1CB2C03527700080107 /* MyTableViewCell.xib in Resources */,
 				AA05F1EA2C04BA6000080107 /* CitiyTableViewCell.xib in Resources */,
 				AAFFFB702BF71E4300B8B428 /* Assets.xcassets in Resources */,
@@ -363,7 +379,7 @@
 				AA05F25A2C089B0600080107 /* testVCViewController.swift in Sources */,
 				AA05F1E92C04BA6000080107 /* CitiyTableViewCell.swift in Sources */,
 				AA05F1E62C04B6D800080107 /* PopularCitiesViewController.swift in Sources */,
-				AA05F27D2C0ABA8800080107 /* otherUserMessagelTableViewCell.swift in Sources */,
+				AA05F27D2C0ABA8800080107 /* OtherUserMessageTableViewCell.swift in Sources */,
 				AA05F23E2C07024E00080107 /* CityInfo.swift in Sources */,
 				AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */,
 				AAFFFCA02BFF792700B8B428 /* SetUpTableViewController.swift in Sources */,
