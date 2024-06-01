@@ -24,19 +24,18 @@ class ChattingViewController: UIViewController {
                }
         chattingHomeTableView.delegate = self
         chattingHomeTableView.dataSource = self
+        chattingHomeTableView.register(UINib(nibName: "UserChatTableViewCell", bundle: nil), forCellReuseIdentifier: "UserChatTableViewCell")
+                chattingHomeTableView.register(UINib(nibName: "OtherUserMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "OtherUserMessageTableViewCell")
     }
-
 
 }
 
 extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
+         return 0
+     }
+     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
     }
-    
-    
-}
+     }
