@@ -37,12 +37,25 @@ class ChattingViewController: UIViewController {
         
         messageTextField.placeholder = "메세지를 입력하세요"
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+          super.viewDidAppear(animated)
+          scrollToBottom()
+      }
+    
+    
+    func scrollToBottom() {
+            DispatchQueue.main.async {
+                if let lastIndex = self.chatRoom?.chatList.indices.last {
+                    let indexPath = IndexPath(row: lastIndex, section: 0)
+                    self.chattingHomeTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                }
+            }
+        }
+    
     @objc func sendButtonClicked() {
         print("전송 버튼 클릭")
-        if let lastIndex = chatRoom?.chatList.indices.last {
-                 let indexPath = IndexPath(row: lastIndex, section: 0)
-                 chattingHomeTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-             }
+    
        }
     
     func getCurrentTime() -> String {
