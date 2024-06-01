@@ -9,15 +9,21 @@ import UIKit
 
 class UserChatTableViewCell: UITableViewCell {
 
+    @IBOutlet var userMessagechatLB: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
-
+    
+    func configure(with message: String) {
+        userMessagechatLB.text = message
+        }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        
     }
     
 }
