@@ -19,11 +19,24 @@ class ChattingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let chatRoom = chatRoom {
-                  
                    navigationItem.title = chatRoom.chatroomName
                    print("채팅룸 \(chatRoom.chatroomName)")
                }
+        chattingHomeTableView.delegate = self
+        chattingHomeTableView.dataSource = self
     }
 
 
+}
+
+extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
 }
