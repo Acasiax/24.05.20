@@ -36,6 +36,7 @@
 		AA05F27A2C0ABA2400080107 /* UserChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F2782C0ABA2400080107 /* UserChatTableViewCell.xib */; };
 		AA05F27D2C0ABA8800080107 /* OtherUserMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F27B2C0ABA8800080107 /* OtherUserMessageTableViewCell.swift */; };
 		AA05F27E2C0ABA8800080107 /* OtherUserMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F27C2C0ABA8800080107 /* OtherUserMessageTableViewCell.xib */; };
+		AA05F2882C0C3B2100080107 /* ChatMessageUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F2872C0C3B2100080107 /* ChatMessageUI.swift */; };
 		AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */; };
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
@@ -83,6 +84,7 @@
 		AA05F2782C0ABA2400080107 /* UserChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatTableViewCell.xib; sourceTree = "<group>"; };
 		AA05F27B2C0ABA8800080107 /* OtherUserMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserMessageTableViewCell.swift; sourceTree = "<group>"; };
 		AA05F27C2C0ABA8800080107 /* OtherUserMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherUserMessageTableViewCell.xib; sourceTree = "<group>"; };
+		AA05F2872C0C3B2100080107 /* ChatMessageUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageUI.swift; sourceTree = "<group>"; };
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
@@ -116,10 +118,9 @@
 		AA05F1CE2C03574900080107 /* 레스토랑 */ = {
 			isa = PBXGroup;
 			children = (
+				AA05F2852C0C3A9100080107 /* Cell */,
 				AADE80F62C034A2500302F01 /* Restaurant.swift */,
 				AA05F1CC2C03529F00080107 /* foodViewController.swift */,
-				AA05F1C82C03527700080107 /* MyTableViewCell.swift */,
-				AA05F1C92C03527700080107 /* MyTableViewCell.xib */,
 			);
 			name = "레스토랑";
 			path = "레스토랑";
@@ -161,9 +162,8 @@
 		AA05F22E2C06331200080107 /* 쇼핑 */ = {
 			isa = PBXGroup;
 			children = (
+				AA05F2842C0C3A7800080107 /* Cell */,
 				AA05F22F2C06333D00080107 /* shoppingListViewController.swift */,
-				AA05F2312C06346D00080107 /* ShoppingTableViewCell.swift */,
-				AA05F2322C06346D00080107 /* ShoppingTableViewCell.xib */,
 				AA05F2352C0637C200080107 /* ShoppingItem.swift */,
 			);
 			name = "쇼핑";
@@ -186,10 +186,10 @@
 		AA05F26A2C09CD2700080107 /* 채팅 */ = {
 			isa = PBXGroup;
 			children = (
+				AA05F2862C0C3ABE00080107 /* Ext-chat */,
+				AA05F2832C0C3A4600080107 /* ChatView */,
 				AA05F2812C0AC21000080107 /* Cell */,
 				AA05F2802C0AC1F300080107 /* Model */,
-				AA05F2752C09F2BB00080107 /* ChattingViewController.swift */,
-				AA05F26D2C09CDAE00080107 /* ChatListController.swift */,
 			);
 			name = "채팅";
 			path = "채팅";
@@ -214,6 +214,41 @@
 				AA05F2702C09CF3A00080107 /* ChatTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		AA05F2832C0C3A4600080107 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F2752C09F2BB00080107 /* ChattingViewController.swift */,
+				AA05F26D2C09CDAE00080107 /* ChatListController.swift */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		AA05F2842C0C3A7800080107 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F2312C06346D00080107 /* ShoppingTableViewCell.swift */,
+				AA05F2322C06346D00080107 /* ShoppingTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AA05F2852C0C3A9100080107 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F1C82C03527700080107 /* MyTableViewCell.swift */,
+				AA05F1C92C03527700080107 /* MyTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AA05F2862C0C3ABE00080107 /* Ext-chat */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F2872C0C3B2100080107 /* ChatMessageUI.swift */,
+			);
+			path = "Ext-chat";
 			sourceTree = "<group>";
 		};
 		AA0674632C02F9B100DE8E58 /* 여행 */ = {
@@ -360,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AADE80F72C034A2500302F01 /* Restaurant.swift in Sources */,
+				AA05F2882C0C3B2100080107 /* ChatMessageUI.swift in Sources */,
 				AAFFFB6B2BF71E4200B8B428 /* ViewController.swift in Sources */,
 				AA05F2302C06333D00080107 /* shoppingListViewController.swift in Sources */,
 				AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */,

@@ -1,6 +1,6 @@
 //
 //  MyTableViewCell.swift
-//  uitableview.practice
+// 
 //
 //  Created by 이윤지 on 5/26/24.
 //

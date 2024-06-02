@@ -22,28 +22,25 @@ class UserChatTableViewCell: UITableViewCell {
     }
     
     func configure(with message: String, date: String) {
-        
-        
         userMessagechatLB.text = message
         userMessageDateLB.text = formatTime(dateString: date)
         }
     
+    
     func UISetup() {
-        
-        userUIView.backgroundColor = UIColor(red: 1.00, green: 0.78, blue: 0.87, alpha: 1.00)
-        userUIView.layer.cornerRadius = 15
-        userUIView.layer.masksToBounds = true
-        userMessagechatLB.backgroundColor = .clear
-        userMessagechatLB.numberOfLines = 0
-        userMessageDateLB.font = UIFont.systemFont(ofSize: 12)
-        userMessageDateLB.textColor = .gray
-    }
+         userUIView.messageUISetup(backgroundColor: UIColor(red: 1.00, green: 0.78, blue: 0.87, alpha: 1.00), cornerRadius: 15)
+         userMessagechatLB.chatLbSetup(fontSize: 16)
+         userMessageDateLB.chatLbSetup(fontSize: 12)
+     }
+
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         
     }
+    
+    
     private func formatTime(dateString: String) -> String? {
           let dateFormatter = DateFormatter()
           dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
