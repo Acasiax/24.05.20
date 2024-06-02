@@ -22,6 +22,7 @@ class OtherUserMessageTableViewCell: UITableViewCell, CellIdentifiable {
     override func awakeFromNib() {
         super.awakeFromNib()
         UISetup()
+        
     }
     
     func configure(with message: String, date: String, user: User) {
@@ -29,10 +30,13 @@ class OtherUserMessageTableViewCell: UITableViewCell, CellIdentifiable {
         otherUserMessageLB.text = message
         otherUserMessageLB.numberOfLines = 0
         dateLB.text = date.formattedTime()
+        otheruserProfileImage.image = UIImage(named: user.profileImage)
+       
     }
     
     func UISetup() {
-        otheruserProfileImage.image = UIImage(systemName: "person.circle")
+        self.contentView.backgroundColor = UIColor(red: 1.00, green: 1.00, blue: 0.72, alpha: 1.00)
+       // otheruserProfileImage.image = UIImage(systemName: "person.circle")
         otheruserProfileImage.layer.cornerRadius = otheruserProfileImage.frame.width / 2
         otheruserProfileImage.layer.masksToBounds = true
         otherUIView.messageUISetup(backgroundColor: UIColor(red: 0.74, green: 0.88, blue: 1.00, alpha: 1.00), cornerRadius: 15)

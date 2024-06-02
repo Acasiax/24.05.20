@@ -22,6 +22,7 @@ class ChattingViewController: UIViewController {
     var chatRoom: ChatRoom?
     override func viewDidLoad() {
         super.viewDidLoad()
+        chattingHomeTableView.backgroundColor = UIColor(red: 1.00, green: 1.00, blue: 0.72, alpha: 1.00)
         if let chatRoom = chatRoom {
                    navigationItem.title = chatRoom.chatroomName
                    print("채팅룸 \(chatRoom.chatroomName)")

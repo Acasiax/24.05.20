@@ -30,6 +30,7 @@ class UserChatTableViewCell: UITableViewCell, CellIdentifiable {
     
     
     func UISetup() {
+        self.contentView.backgroundColor = UIColor(red: 1.00, green: 1.00, blue: 0.72, alpha: 1.00)
          userUIView.messageUISetup(backgroundColor: UIColor(red: 1.00, green: 0.78, blue: 0.87, alpha: 1.00), cornerRadius: 15)
          userMessagechatLB.chatLbSetup(fontSize: 16)
          userMessageDateLB.chatLbSetup(fontSize: 12)
