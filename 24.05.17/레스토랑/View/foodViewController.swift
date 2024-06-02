@@ -15,8 +15,13 @@ class foodViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet var tableView: UITableView!
     
     var restaurantList = RestaurantList().restaurantArray
-    var filteredRestaurantList = [Restaurant]()
-    
+   // var filteredRestaurantList = [Restaurant]()
+    var filteredRestaurantList = [Restaurant]() {
+           didSet {
+               print("🔁리스트갱신 reloadData")
+               tableView.reloadData()
+           }
+       }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -36,19 +41,24 @@ class foodViewController: UIViewController, UISearchBarDelegate {
        }
     //스위치 go~
     func filterRestaurants() {
+        let categoryFiltered: [Restaurant]
            switch foodSegWay.selectedSegmentIndex {
            case 0:
-               filteredRestaurantList = restaurantList
+               categoryFiltered = restaurantList
            case 1:
-               filteredRestaurantList = restaurantList.filter { $0.category == "한식" }
+               categoryFiltered = restaurantList.filter { $0.category == "한식" }
            case 2:
-               filteredRestaurantList = restaurantList.filter { $0.category == "중식" }
+               categoryFiltered = restaurantList.filter { $0.category == "중식" }
            case 3:
-               filteredRestaurantList = restaurantList.filter { $0.category == "일식" }
+               categoryFiltered = restaurantList.filter { $0.category == "일식" }
            default:
-               filteredRestaurantList = restaurantList
+               categoryFiltered = restaurantList
            }
-           tableView.reloadData()
+        if let new = textField.text, !new.isEmpty {
+                   filteredRestaurantList = categoryFiltered.filter { $0.name.contains(new) }
+               } else {
+                   filteredRestaurantList = categoryFiltered
+               }
        }
        
     
@@ -59,6 +69,9 @@ class foodViewController: UIViewController, UISearchBarDelegate {
         tableView.reloadData()
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+          filterRestaurants()
+      }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
@@ -86,9 +99,9 @@ extension foodViewController: UITableViewDataSource, UITableViewDelegate {
         if let newvc = storyboard.instantiateViewController(withIdentifier: "testVC") as? testVCViewController {
             let selectedRestaurant = filteredRestaurantList[indexPath.row]
             // 새 뷰 컨트롤러의 내비게이션 아이템 제목을 설정
-            newvc.navigationItem.title = filteredRestaurantList[indexPath.row].name
+            newvc.navigationItem.title = selectedRestaurant.name
             newvc.restaurantLatitude = selectedRestaurant.latitude
-                       newvc.restaurantLongitude = selectedRestaurant.longitude
+            newvc.restaurantLongitude = selectedRestaurant.longitude
             // 내비게이션 컨트롤러를 통해 새 뷰 컨트롤러로 푸시
             if let navigationController = navigationController {
                 navigationController.pushViewController(newvc, animated: true)
