@@ -23,7 +23,7 @@ class UserChatTableViewCell: UITableViewCell {
     
     func configure(with message: String, date: String) {
         userMessagechatLB.text = message
-        userMessageDateLB.text = formatTime(dateString: date)
+        userMessageDateLB.text = date.formattedTime()
         }
     
     
@@ -40,13 +40,4 @@ class UserChatTableViewCell: UITableViewCell {
         
     }
     
-    
-    private func formatTime(dateString: String) -> String? {
-          let dateFormatter = DateFormatter()
-          dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-          guard let date = dateFormatter.date(from: dateString) else { return nil }
-          
-          dateFormatter.dateFormat = "HH:mm"
-          return dateFormatter.string(from: date)
-      }
 }

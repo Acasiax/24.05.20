@@ -23,3 +23,33 @@ extension UILabel {
         self.numberOfLines = 0
     }
 }
+
+
+extension String {
+    func formattedTime(from inputFormat: String = "yyyy-MM-dd HH:mm", to outputFormat: String = "HH:mm") -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = inputFormat
+        guard let date = dateFormatter.date(from: self) else { return nil }
+        dateFormatter.dateFormat = outputFormat
+        return dateFormatter.string(from: date)
+    }
+}
+
+//채팅 리스트셀 ChatTableViewCell 이미지뷰
+extension UIImageView {
+    func applyProfileImageSetup(cornerRadius: CGFloat, imageName: String) {
+        self.image = UIImage(named: imageName)
+        self.layer.cornerRadius = cornerRadius
+        self.clipsToBounds = true
+    }
+}
+
+extension String {
+    func formattedTimeYYMMDD(from inputFormat: String = "yyyy-MM-dd HH:mm", to outputFormat: String = "yy.M.d") -> String? {
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = inputFormat
+           guard let date = dateFormatter.date(from: self) else { return nil }
+           dateFormatter.dateFormat = outputFormat
+           return dateFormatter.string(from: date)
+       }
+}

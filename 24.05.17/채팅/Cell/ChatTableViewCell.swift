@@ -26,26 +26,18 @@ class ChatTableViewCell: UITableViewCell {
             super.setSelected(selected, animated: animated)
         }
 
-        func configure(with chat: Chat, chatRoom: ChatRoom) {
-            
-            messageLB.numberOfLines = 0
-            messageLB.text = chat.message
-            
-            
-            chatroomName.text = chatRoom.chatroomName
-            
-            
-            userLB.numberOfLines = 0
-            userLB.text = chat.user.rawValue
-            
-            dateLB.text = chat.date
-            dateLB.font = UIFont.systemFont(ofSize: 12)
-            dateLB.textColor = .gray
-            
-            profileImage.image = UIImage(named: chat.user.profileImage)
-           // profileImage.contentMode = .scaleToFill
-            profileImage.backgroundColor = .red
-            profileImage.layer.cornerRadius = 40
-            profileImage.clipsToBounds = true
-        }
-    }
+    func configure(with chat: Chat, chatRoom: ChatRoom) {
+          messageLB.text = chat.message
+          chatroomName.text = chatRoom.chatroomName
+          userLB.text = chat.user.rawValue
+          dateLB.text = chat.date.formattedTimeYYMMDD()
+          profileImage.applyProfileImageSetup(cornerRadius: 40, imageName: chat.user.profileImage)
+        profileImage.backgroundColor = .red
+      }
+      
+      private func UISetup() {
+          messageLB.chatLbSetup(fontSize: 16)
+          userLB.chatLbSetup(fontSize: 16)
+          dateLB.chatLbSetup(fontSize: 12, textColor: .gray)
+      }
+  }
