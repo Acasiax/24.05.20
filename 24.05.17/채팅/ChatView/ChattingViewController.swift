@@ -55,7 +55,18 @@ class ChattingViewController: UIViewController {
     
     @objc func sendButtonClicked() {
         print("전송 버튼 클릭")
-    
+        guard let messageText = messageTextField.text, !messageText.isEmpty else {
+                    return
+                }
+        let newMessage = Chat(user: .user, date: getCurrentTime(), message: messageText)
+        
+        // chatRoom의 chatList에 메시지 추가
+        chatRoom?.chatList.append(newMessage)
+        //삽질🔧마지막 인덱스는 count - 1, 섹션 0으로 고정.
+        let newIndexPath = IndexPath(row: (chatRoom?.chatList.count ?? 1) - 1, section: 0)
+                chattingHomeTableView.insertRows(at: [newIndexPath], with: .automatic)
+                messageTextField.text = nil
+                scrollToBottom()
        }
     
     func getCurrentTime() -> String {

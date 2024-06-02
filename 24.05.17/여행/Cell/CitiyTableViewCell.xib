@@ -50,6 +50,7 @@
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e6A-g9-KJZ">
                         <rect key="frame" x="289" y="8" width="40" height="40"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="AGG-sI-fGd"/>
                             <constraint firstAttribute="width" constant="40" id="dEl-kb-7hs"/>
@@ -80,12 +81,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cityImage" destination="xMj-H2-vOQ" id="gbA-n0-wzj"/>
-                <outlet property="heartImageView" destination="e6A-g9-KJZ" id="eM0-Va-B8s"/>
-                <outlet property="pointLB" destination="MtP-LS-EWP" id="fMR-xY-c2E"/>
-                <outlet property="saveCount" destination="bOx-GB-09O" id="Cos-rk-nzY"/>
-                <outlet property="subTitleLB" destination="GrE-Q3-gyd" id="ROO-4x-8Rx"/>
-                <outlet property="titleLB" destination="4f0-Eh-4U3" id="RM7-aD-xXl"/>
+                <outlet property="cityImage" destination="xMj-H2-vOQ" id="Gee-m8-KZZ"/>
+                <outlet property="heartImageView" destination="e6A-g9-KJZ" id="a4G-Q8-qqw"/>
+                <outlet property="pointLB" destination="MtP-LS-EWP" id="kIv-uz-pIt"/>
+                <outlet property="saveCount" destination="bOx-GB-09O" id="qvR-IP-sIG"/>
+                <outlet property="subTitleLB" destination="GrE-Q3-gyd" id="XZ8-K9-FM1"/>
+                <outlet property="titleLB" destination="4f0-Eh-4U3" id="lOW-6I-4VS"/>
             </connections>
             <point key="canvasLocation" x="17.557251908396946" y="45.070422535211272"/>
         </tableViewCell>

@@ -12,7 +12,7 @@
 		AA05F1CD2C03529F00080107 /* foodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1CC2C03529F00080107 /* foodViewController.swift */; };
 		AA05F1E22C04B1C800080107 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1E12C04B1C800080107 /* TravelModel.swift */; };
 		AA05F1E62C04B6D800080107 /* PopularCitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1E52C04B6D800080107 /* PopularCitiesViewController.swift */; };
-		AA05F1E92C04BA6000080107 /* CitiyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1E72C04BA6000080107 /* CitiyTableViewCell.swift */; };
+		AA05F1E92C04BA6000080107 /* CitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1E72C04BA6000080107 /* CitiesTableViewCell.swift */; };
 		AA05F1EA2C04BA6000080107 /* CitiyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F1E82C04BA6000080107 /* CitiyTableViewCell.xib */; };
 		AA05F1EF2C04C80300080107 /* ADTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA05F1ED2C04C80300080107 /* ADTableViewCell.swift */; };
 		AA05F1F02C04C80300080107 /* ADTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA05F1EE2C04C80300080107 /* ADTableViewCell.xib */; };
@@ -61,7 +61,7 @@
 		AA05F1CC2C03529F00080107 /* foodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodViewController.swift; sourceTree = "<group>"; };
 		AA05F1E12C04B1C800080107 /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
 		AA05F1E52C04B6D800080107 /* PopularCitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCitiesViewController.swift; sourceTree = "<group>"; };
-		AA05F1E72C04BA6000080107 /* CitiyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiyTableViewCell.swift; sourceTree = "<group>"; };
+		AA05F1E72C04BA6000080107 /* CitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewCell.swift; sourceTree = "<group>"; };
 		AA05F1E82C04BA6000080107 /* CitiyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiyTableViewCell.xib; sourceTree = "<group>"; };
 		AA05F1ED2C04C80300080107 /* ADTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADTableViewCell.swift; sourceTree = "<group>"; };
 		AA05F1EE2C04C80300080107 /* ADTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADTableViewCell.xib; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		AA05F1EC2C04C7BE00080107 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				AA05F1E72C04BA6000080107 /* CitiyTableViewCell.swift */,
+				AA05F1E72C04BA6000080107 /* CitiesTableViewCell.swift */,
 				AA05F1E82C04BA6000080107 /* CitiyTableViewCell.xib */,
 				AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */,
 				AA05F1ED2C04C80300080107 /* ADTableViewCell.swift */,
@@ -286,14 +286,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		AA0674632C02F9B100DE8E58 /* 여행 */ = {
+		AA0674632C02F9B100DE8E58 /* 여행관광 */ = {
 			isa = PBXGroup;
 			children = (
 				AA05F24D2C076A1600080107 /* View */,
 				AA05F1EC2C04C7BE00080107 /* Cell */,
 				AA05F1EB2C04C79A00080107 /* Model */,
 			);
-			name = "여행";
+			name = "여행관광";
 			path = "여행";
 			sourceTree = "<group>";
 		};
@@ -330,7 +330,7 @@
 				AA05F26A2C09CD2700080107 /* 채팅 */,
 				AA05F22E2C06331200080107 /* 쇼핑 */,
 				AA05F1CE2C03574900080107 /* 레스토랑 */,
-				AA0674632C02F9B100DE8E58 /* 여행 */,
+				AA0674632C02F9B100DE8E58 /* 여행관광 */,
 				AADE80F12C03114500302F01 /* BMI랑 감정이랑 신조어 */,
 				AA05F1D12C037A2900080107 /* 카카오톡 */,
 				AAFFFB662BF71E4200B8B428 /* AppDelegate.swift */,
@@ -449,7 +449,7 @@
 				AA05F1E22C04B1C800080107 /* TravelModel.swift in Sources */,
 				AA05F2712C09CF3A00080107 /* ChatTableViewCell.swift in Sources */,
 				AA05F25A2C089B0600080107 /* testVCViewController.swift in Sources */,
-				AA05F1E92C04BA6000080107 /* CitiyTableViewCell.swift in Sources */,
+				AA05F1E92C04BA6000080107 /* CitiesTableViewCell.swift in Sources */,
 				AA05F1E62C04B6D800080107 /* PopularCitiesViewController.swift in Sources */,
 				AA05F27D2C0ABA8800080107 /* OtherUserMessageTableViewCell.swift in Sources */,
 				AA05F23E2C07024E00080107 /* CityInfo.swift in Sources */,
@@ -617,7 +617,7 @@
 				DEVELOPMENT_TEAM = 4KLMMMFY4D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 24.05.17/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "신조어";
+				INFOPLIST_KEY_CFBundleDisplayName = "과제";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -649,7 +649,7 @@
 				DEVELOPMENT_TEAM = 4KLMMMFY4D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 24.05.17/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "신조어";
+				INFOPLIST_KEY_CFBundleDisplayName = "과제";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -129,3 +129,4 @@ extension PopularCitiesViewController: UITableViewDelegate, UITableViewDataSourc
 //🥕1.데이터 받을 공간 생성: DetailViewController에 데이터를 받을 프로퍼티를 생성합니다.
 //🥕2. 프로퍼티에 데이터 추가/변경: `HomeViewController`에서 `DetailViewController`로 데이터 전달
 //🥕3. 전달 받은 값을 뷰에 표현: `DetailViewController`의 `viewDidLoad`에서 전달 받은 데이터를 사용하여 UI를 업데이트
+

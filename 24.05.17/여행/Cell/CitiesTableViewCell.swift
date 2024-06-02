@@ -9,22 +9,18 @@ import UIKit
 
 class CitiyTableViewCell: UITableViewCell {
     
+    
     @IBOutlet var cityImage: UIImageView!
+    
     @IBOutlet var heartImageView: UIImageView!
+    
     @IBOutlet var titleLB: UILabel!
+    
     @IBOutlet var subTitleLB: UILabel!
+    
     @IBOutlet var pointLB: UILabel!
+    
     @IBOutlet var saveCount: UILabel!
-    
-    
-//    버튼 리스트 초기화 위치
-//    viewDidLoad에서 선언
-//    lazy var를 사용하여 초기화 시점을 지연
-//    lazy var 사용 이유
-//    초기화 시점을 지연시켜 버튼과 리스트가 동시에 초기화되는 문제를 해결
-//    스택뷰 초기화
-//    스택뷰에서도 lazy var를 사용하여 초기화 시점을 지연
-    
     
     static let indentifier1 = "CitiyTableViewCell"
     
@@ -39,7 +35,7 @@ class CitiyTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         //  🌟tableView.rowHeight = 120 //이거 말고 오토매틱 디멘션 사용하기🌟
-        cityImage.layer.cornerRadius = 10 
+        cityImage.layer.cornerRadius = 10
         cityImage.clipsToBounds = true
         // 폰트 스타일 설정
                 titleLB.font = UIFont.boldSystemFont(ofSize: 16)
@@ -82,3 +78,4 @@ class CitiyTableViewCell: UITableViewCell {
                 heartImageView.image = travel.like ?? false ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
             }
         }
+
