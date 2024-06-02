@@ -36,7 +36,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5R-ej-hCA">
-                        <rect key="frame" x="386.33333333333331" y="95" width="41.333333333333314" height="21"/>
+                        <rect key="frame" x="391.33333333333331" y="95" width="41.333333333333314" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                     <constraint firstAttribute="bottom" secondItem="15u-7J-2P9" secondAttribute="bottom" constant="10" id="GUk-cQ-BQi"/>
                     <constraint firstItem="15u-7J-2P9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="100" id="Y3m-33-WfZ"/>
                     <constraint firstItem="15u-7J-2P9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dke-L5-3fF"/>
-                    <constraint firstItem="15u-7J-2P9" firstAttribute="leading" secondItem="v5R-ej-hCA" secondAttribute="trailing" constant="10" id="u5F-Wh-mTa"/>
+                    <constraint firstItem="15u-7J-2P9" firstAttribute="leading" secondItem="v5R-ej-hCA" secondAttribute="trailing" constant="5" id="u5F-Wh-mTa"/>
                     <constraint firstAttribute="trailing" secondItem="15u-7J-2P9" secondAttribute="trailing" constant="10" id="y0r-48-GT4"/>
                 </constraints>
             </tableViewCellContentView>

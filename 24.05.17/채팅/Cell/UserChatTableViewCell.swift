@@ -7,13 +7,15 @@
 
 import UIKit
 
-class UserChatTableViewCell: UITableViewCell {
+class UserChatTableViewCell: UITableViewCell, CellIdentifiable {
 
     
     @IBOutlet var userUIView: UIView!
     @IBOutlet var userMessagechatLB: UILabel!
     @IBOutlet var userMessageDateLB: UILabel!
-    
+    static var identifier: String {
+            return String(describing: self)
+        }
     
     override func awakeFromNib() {
         super.awakeFromNib()

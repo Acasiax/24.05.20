@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OtherUserMessageTableViewCell: UITableViewCell {
+class OtherUserMessageTableViewCell: UITableViewCell, CellIdentifiable {
     
     
     @IBOutlet var otheruserProfileImage: UIImageView!
@@ -15,7 +15,9 @@ class OtherUserMessageTableViewCell: UITableViewCell {
     @IBOutlet var otherUIView: UIView!
     @IBOutlet var otherUserMessageLB: UILabel!
     @IBOutlet var dateLB: UILabel!
-    
+    static var identifier: String {
+            return String(describing: self)
+        }
     
     override func awakeFromNib() {
         super.awakeFromNib()

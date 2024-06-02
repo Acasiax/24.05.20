@@ -736,7 +736,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-8T-zFZ">
-                                        <rect key="frame" x="16.000000000000004" y="16" width="43.333333333333343" height="39.333333333333329"/>
+                                        <rect key="frame" x="16" y="16.000000000000004" width="43.333333333333336" height="39.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-9f-uSu">
                                                 <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="20.333333333333332"/>
@@ -1380,7 +1380,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHO-f9-go3">
-                                <rect key="frame" x="0.0" y="95" width="393" height="723"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
@@ -1390,7 +1390,7 @@
                             <constraint firstItem="lHO-f9-go3" firstAttribute="trailing" secondItem="SG2-dT-EJy" secondAttribute="trailing" id="7o4-gu-5FB"/>
                             <constraint firstItem="lHO-f9-go3" firstAttribute="leading" secondItem="SG2-dT-EJy" secondAttribute="leading" id="Naf-Bt-co3"/>
                             <constraint firstItem="lHO-f9-go3" firstAttribute="bottom" secondItem="SG2-dT-EJy" secondAttribute="bottom" id="eab-sU-7Zw"/>
-                            <constraint firstItem="lHO-f9-go3" firstAttribute="top" secondItem="SG2-dT-EJy" secondAttribute="top" constant="36" id="f0Y-HT-yLz"/>
+                            <constraint firstItem="lHO-f9-go3" firstAttribute="top" secondItem="SG2-dT-EJy" secondAttribute="top" id="f0Y-HT-yLz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zqg-Xe-J88"/>

@@ -73,12 +73,12 @@ extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let messageData = chatRoom!.chatList[indexPath.row]
         if messageData.user == .user {
-                   let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatTableViewCell", for: indexPath) as! UserChatTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: UserChatTableViewCell.identifier, for: indexPath) as! UserChatTableViewCell
             //Data Pass2. 담기
             cell.configure(with: messageData.message, date: messageData.date)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OtherUserMessageTableViewCell", for: indexPath) as! OtherUserMessageTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: OtherUserMessageTableViewCell.identifier, for: indexPath) as! OtherUserMessageTableViewCell
             cell.configure(with: messageData.message, date: messageData.date, user: messageData.user)
             return cell
         }

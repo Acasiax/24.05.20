@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5od-iO-rwb">
-                        <rect key="frame" x="65" y="46" width="62" height="41"/>
+                        <rect key="frame" x="65" y="36" width="62" height="41"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fU-e8-P3o">
                                 <rect key="frame" x="10" y="10" width="42" height="21"/>
@@ -59,7 +59,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="5od-iO-rwb" firstAttribute="top" secondItem="Oat-py-F2G" secondAttribute="bottom" constant="15" id="484-EW-9qd"/>
+                    <constraint firstItem="5od-iO-rwb" firstAttribute="top" secondItem="Oat-py-F2G" secondAttribute="bottom" constant="5" id="484-EW-9qd"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gw3-Pw-lZu" secondAttribute="trailing" id="BzS-fR-4gW"/>
                     <constraint firstItem="Gw3-Pw-lZu" firstAttribute="leading" secondItem="5od-iO-rwb" secondAttribute="trailing" constant="4" id="Cju-D2-zWi"/>
                     <constraint firstItem="5od-iO-rwb" firstAttribute="leading" secondItem="8qa-4B-tWs" secondAttribute="trailing" constant="5" id="HP5-wI-0FN"/>
