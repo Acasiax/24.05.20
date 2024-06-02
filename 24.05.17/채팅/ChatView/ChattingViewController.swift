@@ -58,11 +58,11 @@ class ChattingViewController: UIViewController {
     
        }
     
-//    func getCurrentTime() -> String {
-//          let dateFormatter = DateFormatter()
-//          dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
-//          return dateFormatter.string(from: Date())
-//      }
+    func getCurrentTime() -> String {
+          let dateFormatter = DateFormatter()
+          dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+          return dateFormatter.string(from: Date())
+      }
 }
 
 extension ChattingViewController: UITableViewDelegate, UITableViewDataSource {
