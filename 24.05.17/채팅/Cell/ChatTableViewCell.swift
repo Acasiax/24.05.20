@@ -20,11 +20,14 @@ class ChatTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
             super.awakeFromNib()
+            UISetup()
+   
         }
 
         override func setSelected(_ selected: Bool, animated: Bool) {
             super.setSelected(selected, animated: animated)
         }
+    
 
     func configure(with chat: Chat, chatRoom: ChatRoom) {
           messageLB.text = chat.message
@@ -32,12 +35,15 @@ class ChatTableViewCell: UITableViewCell {
           userLB.text = chat.user.rawValue
           dateLB.text = chat.date.formattedTimeYYMMDD()
           profileImage.applyProfileImageSetup(cornerRadius: 40, imageName: chat.user.profileImage)
-        profileImage.backgroundColor = .red
+          profileImage.backgroundColor = .red
       }
       
+    
       private func UISetup() {
           messageLB.chatLbSetup(fontSize: 16)
           userLB.chatLbSetup(fontSize: 16)
-          dateLB.chatLbSetup(fontSize: 12, textColor: .gray)
+          dateLB.chatLbSetup(fontSize: 13, textColor: .gray)
+          userLB.font = UIFont.boldSystemFont(ofSize: 16)
+          
       }
   }
