@@ -11,8 +11,8 @@ class ChatListController: UIViewController {
     
     @IBOutlet var chatSearchBar: UISearchBar!
     @IBOutlet var chattableView: UITableView!
+        
     var filteredChatList: [ChatRoom] = []
-
     let mockChatList = mockUpchatData1.shared.mockChatList
 
         
