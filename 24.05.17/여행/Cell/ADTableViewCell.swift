@@ -7,13 +7,16 @@
 
 import UIKit
 
-class ADTableViewCell: UITableViewCell {
+class ADTableViewCell: UITableViewCell, CellIdentifiable {
     
     @IBOutlet var ADTitleLabel: UILabel!
     @IBOutlet var ADMark: UILabel!
     
     //타입 스태틱
-    static var indentifier2: String = "ADTableViewCell"
+    static var identifier: String {
+            return String(describing: self)
+        }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

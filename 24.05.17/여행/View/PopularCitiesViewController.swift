@@ -24,8 +24,8 @@ class PopularCitiesViewController: UIViewController {
         let cityNib = UINib(nibName: CitiyTableViewCell.indentifier1, bundle: nil)
         PopularCitiesTableView.register(cityNib, forCellReuseIdentifier: CitiyTableViewCell.indentifier1)
         
-        let adNib = UINib(nibName: ADTableViewCell.indentifier2, bundle: nil)
-        PopularCitiesTableView.register(adNib, forCellReuseIdentifier: ADTableViewCell.indentifier2)
+        let adNib = UINib(nibName: ADTableViewCell.identifier, bundle: nil)
+        PopularCitiesTableView.register(adNib, forCellReuseIdentifier: ADTableViewCell.identifier)
         
         
     }
@@ -45,7 +45,7 @@ extension PopularCitiesViewController: UITableViewDelegate, UITableViewDataSourc
         //광고 셀 생성
         if isAdCell(at: indexPath) {
             //단락평가 활용
-            guard let cell = PopularCitiesTableView.dequeueReusableCell(withIdentifier: ADTableViewCell.indentifier2, for: indexPath) as? ADTableViewCell else {
+            guard let cell = PopularCitiesTableView.dequeueReusableCell(withIdentifier: ADTableViewCell.identifier, for: indexPath) as? ADTableViewCell else {
                 return UITableViewCell()
             }
             
