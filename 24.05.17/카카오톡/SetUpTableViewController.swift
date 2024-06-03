@@ -62,7 +62,10 @@ class SetUpTableViewController: UITableViewController {
         let cellIdentifier = "SetCell" //항상 이름 맞는지 한번 더 체크
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) ?? UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
         cell.textLabel?.font = UIFont.systemFont(ofSize: 14)
-        cell.textLabel?.text = cellData[indexPath.section][indexPath.row]
+        
+        if let section = Sections(rawValue: indexPath.section) {
+                    cell.textLabel?.text = section.cellData[indexPath.row]
+                }
         return cell
     }
 }
