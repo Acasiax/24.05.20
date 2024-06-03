@@ -11,14 +11,14 @@ class SetUpTableViewController: UITableViewController {
 
     // 테이블뷰 알고가자!!
     
-    // 섹션 헤더 타이틀
-    private let sectionTitles = ["전체 설정", "개인 설정", "기타"]
-    // 셀 데이터 배열
-    private let cellData = [
-        ["공지사항", "실험실", "버전 정보"],
-        ["개인/보안", "알림", "채팅", "멀티프로필"],
-        ["고객센터/도움말"]
-    ]
+//    // 섹션 헤더 타이틀
+//    private let sectionTitles = ["전체 설정", "개인 설정", "기타"]
+//    // 셀 데이터 배열
+//    private let cellData = [
+//        ["공지사항", "실험실", "버전 정보"],
+//        ["개인/보안", "알림", "채팅", "멀티프로필"],
+//        ["고객센터/도움말"]
+//    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +33,17 @@ class SetUpTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitles[section]
+        return Sections(rawValue: section)?.title
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return sectionTitles.count
+        return Sections.allCases.count
     }
      // 필수매서드,count로 해서 닐 방지하기
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellData[section].count
-    }
+           guard let section = Sections(rawValue: section) else { return 0 }
+           return section.cellData.count
+       }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45
