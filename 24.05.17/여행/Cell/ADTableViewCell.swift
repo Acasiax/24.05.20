@@ -7,15 +7,15 @@
 
 import UIKit
 
-class ADTableViewCell: UITableViewCell, CellIdentifiable {
+class ADTableViewCell: UITableViewCell{
     
     @IBOutlet var ADTitleLabel: UILabel!
     @IBOutlet var ADMark: UILabel!
     
     //타입 스태틱
-    static var identifier: String {
-            return String(describing: self)
-        }
+  //  static var identifier: String {
+//            return String(describing: self)
+//        }
     
     
     override func awakeFromNib() {

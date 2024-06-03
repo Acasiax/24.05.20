@@ -7,6 +7,21 @@
 
 import UIKit
 
+// CellIdentifiable 프로토콜 정의
 protocol CellIdentifiable {
     static var identifier: String { get }
+}
+
+// UITableViewCell이 CellIdentifiable 프로토콜을 채택하도록 확장
+extension UITableViewCell: CellIdentifiable {
+    static var identifier: String {
+        return String(describing: self)
+    }
+}
+
+// UIViewController가 CellIdentifiable 프로토콜을 채택하도록 확장
+extension UIViewController: CellIdentifiable {
+    static var identifier: String {
+        return String(describing: self)
+    }
 }

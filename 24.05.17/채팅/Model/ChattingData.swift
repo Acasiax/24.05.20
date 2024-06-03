@@ -6,6 +6,10 @@
 
 import Foundation
 
+//휴먼 에러 방지, 컴파일 타임에서 오류 처리 가능
+// case로 선택지를 만들지만..
+// rawValue 설정
+// 멤버와 값의 분리 rawvalue
 enum User: String {
     case hue = "Hue"
     case jack = "Jack"
