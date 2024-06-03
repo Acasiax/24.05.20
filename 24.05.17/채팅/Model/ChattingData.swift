@@ -5,6 +5,7 @@
 //
 
 import Foundation
+import UIKit
 
 //휴먼 에러 방지, 컴파일 타임에서 오류 처리 가능
 // case로 선택지를 만들지만..

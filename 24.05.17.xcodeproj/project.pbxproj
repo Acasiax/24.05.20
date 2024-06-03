@@ -42,6 +42,7 @@
 		AA0674672C02FA9300DE8E58 /* MagazineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */; };
 		AA0674692C02FAC000DE8E58 /* TravelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */; };
 		AA06746C2C02FC8300DE8E58 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AA06746B2C02FC8300DE8E58 /* Kingfisher */; };
+		AA2CFAE02C0DA64400797F03 /* SetupTable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2CFADF2C0DA64400797F03 /* SetupTable+Ext.swift */; };
 		AADE80F72C034A2500302F01 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE80F62C034A2500302F01 /* Restaurant.swift */; };
 		AAFFFB672BF71E4200B8B428 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFFB662BF71E4200B8B428 /* AppDelegate.swift */; };
 		AAFFFB692BF71E4200B8B428 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFFB682BF71E4200B8B428 /* SceneDelegate.swift */; };
@@ -90,6 +91,7 @@
 		AA0674642C02F9C600DE8E58 /* MagazineInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		AA0674662C02FA9300DE8E58 /* MagazineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewController.swift; sourceTree = "<group>"; };
 		AA0674682C02FAC000DE8E58 /* TravelTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableCell.swift; sourceTree = "<group>"; };
+		AA2CFADF2C0DA64400797F03 /* SetupTable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupTable+Ext.swift"; sourceTree = "<group>"; };
 		AADE80F62C034A2500302F01 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		AAFFFB632BF71E4200B8B428 /* 24.05.17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 24.05.17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFFFB662BF71E4200B8B428 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				AAFFFC9F2BFF792700B8B428 /* SetUpTableViewController.swift */,
+				AA2CFADF2C0DA64400797F03 /* SetupTable+Ext.swift */,
 			);
 			name = "카카오톡";
 			path = "카카오톡";
@@ -462,6 +465,7 @@
 				AA0674652C02F9C600DE8E58 /* MagazineInfo.swift in Sources */,
 				AA05F2442C07068A00080107 /* ADINTOViewController.swift in Sources */,
 				AAFFFB672BF71E4200B8B428 /* AppDelegate.swift in Sources */,
+				AA2CFAE02C0DA64400797F03 /* SetupTable+Ext.swift in Sources */,
 				AAFFFB692BF71E4200B8B428 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
