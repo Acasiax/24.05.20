@@ -54,7 +54,7 @@ class testVCViewController: UIViewController {
             locationManager.startUpdatingLocation()
         } else {
             print("위치 서비스 허용 off")
-        }     
+        }
     }
     
     func setupMapView() {
@@ -71,7 +71,16 @@ class testVCViewController: UIViewController {
             testmap.addAnnotation(annotation)
         }
     }
-    
+    func setSESACLocation() {
+            let defaultLocation = CLLocationCoordinate2D(latitude: 37.5176577, longitude: 126.8864088)
+            let region = MKCoordinateRegion(center: defaultLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            testmap.setRegion(region, animated: true)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = defaultLocation
+            annotation.title = "기본 위치"
+            testmap.addAnnotation(annotation)
+        }
 
     @objc func showOptions() {
         let alertController = UIAlertController(title: "유형", message: "선택하세요🥕", preferredStyle: .actionSheet)
@@ -153,6 +162,7 @@ extension testVCViewController: CLLocationManagerDelegate {
             
         case .denied, .restricted:
             print("위치 접근 권한이 거부됨 또는 제한됨")
+            setSESACLocation() //새싹으로 이동✈️
             showLocationAccessAlert()
             
         @unknown default:
