@@ -122,7 +122,6 @@
 		AA05F1CE2C03574900080107 /* 레스토랑 */ = {
 			isa = PBXGroup;
 			children = (
-				AA05F28C2C0C571400080107 /* Model */,
 				AA05F28B2C0C570B00080107 /* View */,
 				AA05F2852C0C3A9100080107 /* Cell */,
 			);
@@ -275,7 +274,6 @@
 		AA05F28B2C0C570B00080107 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AA05F1CC2C03529F00080107 /* foodViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,7 +300,9 @@
 		AA584FFC2C22B72C007B92FD /* 음식점지도 */ = {
 			isa = PBXGroup;
 			children = (
+				AA05F28C2C0C571400080107 /* Model */,
 				AA05F2592C089B0600080107 /* testVCViewController.swift */,
+				AA05F1CC2C03529F00080107 /* foodViewController.swift */,
 			);
 			name = "음식점지도";
 			path = "음식점지도";
