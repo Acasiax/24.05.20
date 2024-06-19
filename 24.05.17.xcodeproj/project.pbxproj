@@ -183,7 +183,6 @@
 				AA05F1E52C04B6D800080107 /* PopularCitiesViewController.swift */,
 				AA05F23B2C06FBCC00080107 /* TavelInToViewController.swift */,
 				AA05F2432C07068A00080107 /* ADINTOViewController.swift */,
-				AA05F2592C089B0600080107 /* testVCViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -300,6 +299,15 @@
 			path = "여행";
 			sourceTree = "<group>";
 		};
+		AA584FFC2C22B72C007B92FD /* 음식점지도 */ = {
+			isa = PBXGroup;
+			children = (
+				AA05F2592C089B0600080107 /* testVCViewController.swift */,
+			);
+			name = "음식점지도";
+			path = "음식점지도";
+			sourceTree = "<group>";
+		};
 		AADE80F12C03114500302F01 /* BMI랑 감정이랑 신조어 */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +340,7 @@
 			children = (
 				AA05F26A2C09CD2700080107 /* 채팅 */,
 				AA05F22E2C06331200080107 /* 쇼핑 */,
+				AA584FFC2C22B72C007B92FD /* 음식점지도 */,
 				AA05F1CE2C03574900080107 /* 레스토랑 */,
 				AA0674632C02F9B100DE8E58 /* 여행관광 */,
 				AADE80F12C03114500302F01 /* BMI랑 감정이랑 신조어 */,

@@ -43,6 +43,10 @@ class testVCViewController: UIViewController {
     @objc func showOptions() {
             let alertController = UIAlertController(title: "유형", message: "선택하세요🥕", preferredStyle: .actionSheet)
             
+        let option0 = UIAlertAction(title: "주변 식당", style: .default) { _ in
+            print("📍주변 식당 당첨")
+        }
+        
             let option1 = UIAlertAction(title: "메가박스", style: .default) { _ in
                 print("📍매가박스 당첨")
             }
@@ -61,6 +65,7 @@ class testVCViewController: UIViewController {
         
             let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
             
+        alertController.addAction(option0)
         alertController.addAction(option1)
         alertController.addAction(option2)
         alertController.addAction(option3)
