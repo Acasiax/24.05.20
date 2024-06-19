@@ -7,21 +7,27 @@
 
 import UIKit
 import Kingfisher
+import CoreLocation
+import MapKit
 
-class foodViewController: UIViewController, UISearchBarDelegate {
+class foodViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var foodSegWay: UISegmentedControl!
     @IBOutlet var textField: UISearchBar!
     @IBOutlet var tableView: UITableView!
     
     var restaurantList = RestaurantList().restaurantArray
-   // var filteredRestaurantList = [Restaurant]()
+   
     var filteredRestaurantList = [Restaurant]() {
            didSet {
                print("🔁리스트갱신 reloadData")
                tableView.reloadData()
            }
        }
+    
+    var locationManager: CLLocationManager!
+    var userLocation: CLLocation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -39,6 +45,7 @@ class foodViewController: UIViewController, UISearchBarDelegate {
     @objc func segmentedControlChanged(_ sender: UISegmentedControl) {
            filterRestaurants()
        }
+    
     //스위치 go~
     func filterRestaurants() {
         let categoryFiltered: [Restaurant]
@@ -102,6 +109,10 @@ extension foodViewController: UITableViewDataSource, UITableViewDelegate {
             newvc.navigationItem.title = selectedRestaurant.name
             newvc.restaurantLatitude = selectedRestaurant.latitude
             newvc.restaurantLongitude = selectedRestaurant.longitude
+            
+            newvc.locationManager = CLLocationManager() // 위치 관리자 초기화
+            newvc.locationManager.delegate = newvc 
+            
             // 내비게이션 컨트롤러를 통해 새 뷰 컨트롤러로 푸시
             if let navigationController = navigationController {
                 navigationController.pushViewController(newvc, animated: true)
