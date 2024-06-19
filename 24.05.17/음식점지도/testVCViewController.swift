@@ -7,13 +7,12 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-
-class testVCViewController: UIViewController, CLLocationManagerDelegate {
-    
+//3. delegate설정하기.
+class testVCViewController: UIViewController {
     
     @IBOutlet var testmap: MKMapView!
-    
     
     static var indentifier: String = "testVCViewController"
     
@@ -31,12 +30,15 @@ class testVCViewController: UIViewController, CLLocationManagerDelegate {
         navigationItem.rightBarButtonItem = rightBarButton
         
     }
+    
     func setupLocationManager() {
         print(#function)
+        // 2. viewDidLoad()에서 CLLocationManager 객체 생성하기.
         locationManager = CLLocationManager()
-        locationManager.delegate = self
+        locationManager.delegate = self // 4. delegate = self
+        
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
+        self.locationManager.requestWhenInUseAuthorization() //5. 위치 가져오기
     }
     
     func setupMapView() {
@@ -92,15 +94,39 @@ class testVCViewController: UIViewController, CLLocationManagerDelegate {
         present(alertController, animated: true, completion: nil)
     }
     
+}
+
+
+
+extension testVCViewController: CLLocationManagerDelegate {
+    
+    // CLLocationManagerDelegate 메서드 추가
+       func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+           if let location = locations.last {
+               let region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+               testmap.setRegion(region, animated: true)
+           }
+       }
+       
+       func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+           checkLocationAuthorizationStatus()
+       }
+    
     
     func checkLocationAuthorizationStatus() {
         print(#function)
-            switch CLLocationManager.authorizationStatus() {
+        switch CLLocationManager().authorizationStatus {
             case .authorizedWhenInUse, .authorizedAlways:
+            print("위치 접근 권한이 허용됨")
                 locationManager.startUpdatingLocation()
+            
             case .notDetermined:
-                locationManager.requestWhenInUseAuthorization()
-            case .denied, .restricted: break
+            print("GPS 권한 설정되지 않음")
+            locationManager.requestWhenInUseAuthorization()
+            
+            case .denied, .restricted:
+            print("위치 접근 권한이 거부됨 또는 제한됨")
+            showLocationAccessAlert()
                
             @unknown default:
                 break
@@ -108,6 +134,17 @@ class testVCViewController: UIViewController, CLLocationManagerDelegate {
         }
     
     
+    func showLocationAccessAlert() {
+            let alert = UIAlertController(title: "위치 접근 권한 필요", message: "위치 접근 권한이 필요합니다. 설정에서 권한을 허용해주세요.", preferredStyle: .alert)
+            let settingsAction = UIAlertAction(title: "설정으로 이동", style: .default) { _ in
+                if let appSettings = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+                }
+            }
+            let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+            alert.addAction(settingsAction)
+            alert.addAction(cancelAction)
+            present(alert, animated: true, completion: nil)
+        }
+    
 }
-
-
