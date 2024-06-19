@@ -38,6 +38,10 @@ class foodViewController: UIViewController, UISearchBarDelegate, CLLocationManag
         tableView.register(MyTableViewCell.nib(), forCellReuseIdentifier: MyTableViewCell.identifierName)
         foodSegWay.addTarget(self, action: #selector(segmentedControlChanged), for: .valueChanged)
         
+        
+        
+        
+        
     }
     
 

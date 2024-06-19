@@ -18,7 +18,14 @@ class testVCViewController: UIViewController {
     
     var restaurantLatitude: Double?
     var restaurantLongitude: Double?
-    var locationManager: CLLocationManager!
+   // var locationManager: CLLocationManager!
+  //  2. viewDidLoad()에서 CLLocationManager 객체 생성하기. 4. delegate = self //5. 위치 가져오기 한번에 초기화, 효율성 높임
+    lazy var locationManager: CLLocationManager = {
+         let manager = CLLocationManager()
+         manager.desiredAccuracy = kCLLocationAccuracyBest
+         manager.delegate = self
+         return manager
+     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +36,21 @@ class testVCViewController: UIViewController {
         let rightBarButton = UIBarButtonItem(title: "필터", style: .plain, target: self, action: #selector(showOptions))
         navigationItem.rightBarButtonItem = rightBarButton
         
+        addMapControls()
+        
     }
     
     func setupLocationManager() {
         print(#function)
-        // 2. viewDidLoad()에서 CLLocationManager 객체 생성하기.
-        locationManager = CLLocationManager()
-        locationManager.delegate = self // 4. delegate = self
         
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization() //5. 위치 가져오기
+        locationManager.requestWhenInUseAuthorization()
+        
+//        // 2. viewDidLoad()에서 CLLocationManager 객체 생성하기.
+//        locationManager = CLLocationManager()
+//        locationManager.delegate = self // 4. delegate = self
+//        
+//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//        self.locationManager.requestWhenInUseAuthorization() //5. 위치 가져오기
     }
     
     func setupMapView() {
@@ -56,7 +68,39 @@ class testVCViewController: UIViewController {
         }
     }
     
-    
+    func addMapControls() {
+           // 플러스 버튼 추가
+           let zoomInButton = UIButton(frame: CGRect(x: view.frame.width - 60, y: view.frame.height - 200, width: 40, height: 40))
+           zoomInButton.backgroundColor = .white
+           zoomInButton.layer.cornerRadius = 20
+           zoomInButton.setTitle("+", for: .normal)
+           zoomInButton.setTitleColor(.black, for: .normal)
+           zoomInButton.addTarget(self, action: #selector(zoomIn), for: .touchUpInside)
+           view.addSubview(zoomInButton)
+           
+           // 마이너스 버튼 추가
+           let zoomOutButton = UIButton(frame: CGRect(x: view.frame.width - 60, y: view.frame.height - 150, width: 40, height: 40))
+           zoomOutButton.backgroundColor = .white
+           zoomOutButton.layer.cornerRadius = 20
+           zoomOutButton.setTitle("-", for: .normal)
+           zoomOutButton.setTitleColor(.black, for: .normal)
+           zoomOutButton.addTarget(self, action: #selector(zoomOut), for: .touchUpInside)
+           view.addSubview(zoomOutButton)
+       }
+       
+       @objc func zoomIn() {
+           var region = testmap.region
+           region.span.latitudeDelta /= 2.0
+           region.span.longitudeDelta /= 2.0
+           testmap.setRegion(region, animated: true)
+       }
+       
+       @objc func zoomOut() {
+           var region = testmap.region
+           region.span.latitudeDelta *= 2.0
+           region.span.longitudeDelta *= 2.0
+           testmap.setRegion(region, animated: true)
+       }
     
     @objc func showOptions() {
         let alertController = UIAlertController(title: "유형", message: "선택하세요🥕", preferredStyle: .actionSheet)
