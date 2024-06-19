@@ -32,13 +32,15 @@ class testVCViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     func setupLocationManager() {
+        print(#function)
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
     }
     
     func setupMapView() {
-        
+        print(#function)
         if let latitude = restaurantLatitude, let longitude = restaurantLongitude {
             let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             let region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
@@ -54,16 +56,12 @@ class testVCViewController: UIViewController, CLLocationManagerDelegate {
     
     
     
-    
-    
-    
-    
-    
     @objc func showOptions() {
         let alertController = UIAlertController(title: "유형", message: "선택하세요🥕", preferredStyle: .actionSheet)
         
         let option0 = UIAlertAction(title: "주변 식당", style: .default) { _ in
             print("📍주변 식당 당첨")
+            self.checkLocationAuthorizationStatus()
         }
         
         let option1 = UIAlertAction(title: "메가박스", style: .default) { _ in
@@ -94,4 +92,22 @@ class testVCViewController: UIViewController, CLLocationManagerDelegate {
         present(alertController, animated: true, completion: nil)
     }
     
+    
+    func checkLocationAuthorizationStatus() {
+        print(#function)
+            switch CLLocationManager.authorizationStatus() {
+            case .authorizedWhenInUse, .authorizedAlways:
+                locationManager.startUpdatingLocation()
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+            case .denied, .restricted: break
+               
+            @unknown default:
+                break
+            }
+        }
+    
+    
 }
+
+
